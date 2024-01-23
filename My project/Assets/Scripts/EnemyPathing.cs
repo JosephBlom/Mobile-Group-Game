@@ -9,9 +9,13 @@ public class EnemyPathing : MonoBehaviour
     public float moveSpeed;
     public int nextPosition;
 
+    GameObject pathPoints;
+
     private void Start()
     {
-        nextPosition = 0;
+        nextPosition = 1;
+        pathPoints = GameObject.FindGameObjectWithTag("list");
+        travelPoints = pathPoints.GetComponentsInChildren<Transform>();
     }
 
     // Update is called once per frame
