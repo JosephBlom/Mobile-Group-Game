@@ -11,9 +11,15 @@ public class TowerBrain : MonoBehaviour
     [SerializeField] int rotateSpeed;
 
     [Header("Shooting Variables")]
-
-
+    [SerializeField] GameObject bulletPrefab;
+    [SerializeField] float fireTime;
+    [SerializeField] float bulletSpeed;
     private Transform target;
+
+    private void Start()
+    {
+        StartCoroutine(Shoot());
+    }
 
     private void Update()
     {
@@ -30,6 +36,8 @@ public class TowerBrain : MonoBehaviour
             target = null;
         }
     }
+
+    // Tracking Start ----------------------------------------------------------------------
 
     private void getTarget()
     {
@@ -49,8 +57,33 @@ public class TowerBrain : MonoBehaviour
 
     private bool checkTargetInRange()
     {
+        if(target == null)
+        {
+            return false;
+        }
         return Vector2.Distance(target.position, transform.position) <= targetingRange;
     }
+
+    // Tracking End ----------------------------------------------------------------------
+
+
+    // Shooting Start ----------------------------------------------------------------------
+
+    IEnumerator Shoot()
+    {
+        if (checkTargetInRange())
+        {
+            Vector3 shootDirection = (target.position - transform.position).normalized;
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>().velocity = shootDirection * bulletSpeed;
+            bullet.transform.right = shootDirection;
+            Destroy(bullet, 2);
+        }
+        yield return new WaitForSeconds(fireTime);
+        StartCoroutine(Shoot());
+    }
+
+    // Shooting End ----------------------------------------------------------------------
 
     private void OnDrawGizmosSelected()
     {

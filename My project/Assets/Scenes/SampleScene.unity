@@ -8214,6 +8214,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rotateSpeed: 200
+  bulletPrefab: {fileID: 5993112856686854257, guid: d0a93ac239e6f364d9aacfa301ea03ea, type: 3}
+  fireTime: 0.5
+  bulletSpeed: 10
 --- !u!212 &954218644
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -25,7 +25,6 @@ public class EnemyPathing : MonoBehaviour
     {
         Vector2 direction = (travelPoints[nextPosition].position - transform.position).normalized;
         rb.velocity = direction * moveSpeed;
-        //transform.position = Vector2.MoveTowards(transform.position, travelPoints[nextPosition].position, moveSpeed * Time.deltaTime);
         if (Vector2.Distance(transform.position, travelPoints[nextPosition].position) < 0.2f)
         {
             nextPosition++;
