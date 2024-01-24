@@ -14,7 +14,7 @@ public class EnemyPathing : MonoBehaviour
     private void Start()
     {
         nextPosition = 1;
-        pathPoints = GameObject.FindGameObjectWithTag("list");
+        pathPoints = GameObject.FindGameObjectWithTag("List");
         travelPoints = pathPoints.GetComponentsInChildren<Transform>();
     }
 
