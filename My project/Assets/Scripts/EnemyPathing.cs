@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyPathing : MonoBehaviour
 {
 
+    [SerializeField] Rigidbody2D rb;
+
     public Transform[] travelPoints;
     public float moveSpeed;
     public int nextPosition;
@@ -19,9 +21,11 @@ public class EnemyPathing : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        transform.position = Vector2.MoveTowards(transform.position, travelPoints[nextPosition].position, moveSpeed * Time.deltaTime);
+        Vector2 direction = (travelPoints[nextPosition].position - transform.position).normalized;
+        rb.velocity = direction * moveSpeed;
+        //transform.position = Vector2.MoveTowards(transform.position, travelPoints[nextPosition].position, moveSpeed * Time.deltaTime);
         if (Vector2.Distance(transform.position, travelPoints[nextPosition].position) < 0.2f)
         {
             nextPosition++;
