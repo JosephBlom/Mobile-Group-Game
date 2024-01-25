@@ -9,6 +9,7 @@ TagManager:
   - List
   - Bullet
   - MainCanvas
+  - TowerContainer
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Towers
+    uniqueID: 3073841919
     locked: 0

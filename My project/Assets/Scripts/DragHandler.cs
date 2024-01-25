@@ -5,6 +5,10 @@ using UnityEngine.EventSystems;
 
 public class DragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
+    [Header("Variables for spawning towers")]
+    [SerializeField] GameObject tower;
+    [SerializeField] GameObject towerContainer;
+
     [SerializeField] Canvas canvas;
 
     private CanvasGroup canvasGroup;
@@ -12,6 +16,7 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     private void Awake()
     {
+        towerContainer = GameObject.FindGameObjectWithTag("TowerContainer");
         canvas = GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<Canvas>();
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
@@ -27,8 +32,11 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("Duck");
-        canvasGroup.alpha = 1;
+        Destroy(gameObject);
+        GameObject towerObject = Instantiate(tower, rectTransform.position, Quaternion.identity);
+        towerObject.transform.SetParent(towerContainer.transform, true);
+        towerObject.transform.position = Camera.main.ScreenToWorldPoint(rectTransform.position);
+        towerObject.transform.position = new Vector3(towerObject.transform.position.x, towerObject.transform.position.y, 0);
     }
     public void OnDrag(PointerEventData eventData)
     {
