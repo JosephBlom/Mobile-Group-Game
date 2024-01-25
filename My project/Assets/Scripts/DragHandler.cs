@@ -12,6 +12,7 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     private void Awake()
     {
+        canvas = GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<Canvas>();
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
     }
