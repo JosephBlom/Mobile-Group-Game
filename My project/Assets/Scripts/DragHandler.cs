@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragHandler : MonoBehaviour, IPointerDownHandler, IEndDragHandler, IDragHandler
 {
     [Header("Variables for spawning towers")]
     [SerializeField] GameObject tower;
@@ -25,10 +25,6 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         canvasGroup.alpha = 0.69f;
-    }
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        Debug.Log("Duck");
     }
     public void OnEndDrag(PointerEventData eventData)
     {
