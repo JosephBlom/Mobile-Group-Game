@@ -6,17 +6,20 @@ public class EnemyPathing : MonoBehaviour
 {
 
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] EnemySpawning enemySpawning;
 
     public Transform[] travelPoints;
     public float moveSpeed;
     public int nextPosition;
+    public int startPosition;
 
+    string[] pathNames = { "Path1", "Path2", "Path3", "Path4", "Path5" };
     GameObject pathPoints;
 
     private void Start()
     {
         nextPosition = 1;
-        pathPoints = GameObject.FindGameObjectWithTag("List");
+        pathPoints = GameObject.FindGameObjectWithTag(pathNames[startPosition]);
         travelPoints = pathPoints.GetComponentsInChildren<Transform>();
     }
 
@@ -35,7 +38,7 @@ public class EnemyPathing : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {

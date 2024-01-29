@@ -28,7 +28,9 @@ public class EnemySpawning : MonoBehaviour
         {
             if (enemiesToSpawn.Count > 0)
             {
-                Instantiate(enemiesToSpawn[0], enemySpawns[Random.Range(0, enemySpawns.Count)], Quaternion.identity);
+                int selectedSpawn = Random.Range(0, enemySpawns.Count);
+                enemiesToSpawn[0].GetComponent<EnemyPathing>().startPosition = selectedSpawn;
+                Instantiate(enemiesToSpawn[0], enemySpawns[selectedSpawn], Quaternion.identity);
                 aliveEnemies.Add(enemiesToSpawn[0]);
                 enemiesToSpawn.RemoveAt(0);
                 spawnTimer = spawnInterval;
