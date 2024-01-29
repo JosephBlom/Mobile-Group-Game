@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3140981215580982653}
   - component: {fileID: 8011197948760994906}
   - component: {fileID: 5347469898489815380}
+  - component: {fileID: -4602938422564393814}
   - component: {fileID: 8174786929067353208}
   - component: {fileID: -5481144985501328833}
   m_Layer: 6
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: -5481144985501328833}
+  enemySpawning: {fileID: 0}
   travelPoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -108,6 +110,22 @@ MonoBehaviour:
   - {fileID: 0}
   moveSpeed: 3
   nextPosition: 0
+  startPosition: 1
+  shocked: 0
+--- !u!114 &-4602938422564393814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080822682556119129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d7ef0309e064047b581f9fbacd528e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 9
+  unshockTime: 2
 --- !u!58 &8174786929067353208
 CircleCollider2D:
   m_ObjectHideFlags: 0

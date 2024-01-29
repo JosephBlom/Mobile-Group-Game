@@ -13,6 +13,8 @@ public class EnemyPathing : MonoBehaviour
     public int nextPosition;
     public int startPosition;
 
+    public bool shocked;
+
     string[] pathNames = { "Path1", "Path2", "Path3", "Path4", "Path5" };
     GameObject pathPoints;
 
@@ -27,7 +29,15 @@ public class EnemyPathing : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 direction = (travelPoints[nextPosition].position - transform.position).normalized;
-        rb.velocity = direction * moveSpeed;
+        if (shocked)
+        {
+            rb.velocity = direction * (moveSpeed/2);
+        }
+        else
+        {
+            rb.velocity = direction * moveSpeed;
+        }
+        
         if (Vector2.Distance(transform.position, travelPoints[nextPosition].position) < 0.2f)
         {
             nextPosition++;
@@ -38,11 +48,9 @@ public class EnemyPathing : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public IEnumerator resetSpeed(float unshockTime)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            Destroy(gameObject);
-        }
+        yield return new WaitForSeconds(unshockTime);
+        moveSpeed *= 2;
     }
 }
