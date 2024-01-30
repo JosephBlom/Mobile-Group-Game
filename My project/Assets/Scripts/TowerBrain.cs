@@ -16,6 +16,15 @@ public class TowerBrain : MonoBehaviour
     [SerializeField] float bulletSpeed;
     private Transform target;
 
+    //Skill Refrences
+    private BasicTowerSkills towerSkills;
+
+
+    private void Awake()
+    {
+        towerSkills = new BasicTowerSkills();
+    }
+
     private void Start()
     {
         StartCoroutine(Shoot());
@@ -84,6 +93,7 @@ public class TowerBrain : MonoBehaviour
     }
 
     // Shooting End ----------------------------------------------------------------------
+
 
     private void OnDrawGizmosSelected()
     {
