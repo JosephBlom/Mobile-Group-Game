@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 4517950861520427437}
   - component: {fileID: 5378633772937002746}
   - component: {fileID: 9019971435928427266}
-  - component: {fileID: -4481784326320520692}
-  - component: {fileID: -5206734236000527908}
   m_Layer: 0
   m_Name: TowerFiller
   m_TagString: Untagged
@@ -107,32 +105,3 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5993112856686854257, guid: d0a93ac239e6f364d9aacfa301ea03ea, type: 3}
   fireTime: 0.5
   bulletSpeed: 10
---- !u!114 &-4481784326320520692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8868888333281388338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e9e7e841822a2548ab7cd36af837350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 5993112856686854257, guid: d0a93ac239e6f364d9aacfa301ea03ea, type: 3}
---- !u!114 &-5206734236000527908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8868888333281388338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 091a817f966b9654b9292d2debcd80c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet: {fileID: 5993112856686854257, guid: d0a93ac239e6f364d9aacfa301ea03ea, type: 3}
-  upgradePath1:
-    shock: 0
-    piercing: 0
