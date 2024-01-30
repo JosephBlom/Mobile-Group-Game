@@ -15,6 +15,7 @@ TagManager:
   - Path3
   - Path4
   - Path5
+  - BasicTower
   layers:
   - Default
   - TransparentFX
