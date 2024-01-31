@@ -11,7 +11,7 @@ public class TowerBrain : MonoBehaviour
     [SerializeField] int rotateSpeed;
 
     [Header("Shooting Variables")]
-    [SerializeField] GameObject bulletPrefab;
+    public GameObject bulletPrefab;
     [SerializeField] float fireTime;
     [SerializeField] float bulletSpeed;
     private Transform target;

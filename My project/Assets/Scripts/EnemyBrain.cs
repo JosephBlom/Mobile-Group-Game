@@ -26,12 +26,12 @@ public class EnemyBrain : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            else if (bulletManager.shock)
+            else if (bulletManager.unlockedAbilities.Contains("Shock"))
             {
                 enemyPathing.shocked = true;
                 StartCoroutine(enemyPathing.resetSpeed(unshockTime));
             }
-            if (bulletManager.piercing)
+            if (bulletManager.unlockedAbilities.Contains("Piercing"))
             {
                 return;
             }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8486923680029522194}
   - component: {fileID: 2100889340287936100}
   - component: {fileID: 1272880523494416153}
-  - component: {fileID: 685970116712876640}
+  - component: {fileID: 3149312519758545187}
   - component: {fileID: 6301475527656997284}
   m_Layer: 0
   m_Name: Bullet
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!60 &685970116712876640
+--- !u!60 &3149312519758545187
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +143,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -158,16 +158,16 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.171875, y: 0.15625}
-      - {x: -0.421875, y: 0.15625}
-      - {x: -0.4375, y: 0.078125}
-      - {x: -0.4375, y: -0.140625}
-      - {x: -0.40625, y: -0.15625}
-      - {x: 0.21875, y: -0.15625}
-      - {x: 0.390625, y: -0.125}
-      - {x: 0.4375, y: -0.078125}
-      - {x: 0.4375, y: 0.03125}
-      - {x: 0.390625, y: 0.125}
+    - - {x: 0.34375, y: 0.3125}
+      - {x: -0.84375, y: 0.3125}
+      - {x: -0.875, y: 0.15625}
+      - {x: -0.875, y: -0.28125}
+      - {x: -0.8125, y: -0.3125}
+      - {x: 0.4375, y: -0.3125}
+      - {x: 0.78125, y: -0.25}
+      - {x: 0.875, y: -0.15625}
+      - {x: 0.875, y: 0.0625}
+      - {x: 0.78125, y: 0.25}
   m_UseDelaunayMesh: 0
 --- !u!114 &6301475527656997284
 MonoBehaviour:
@@ -182,5 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 3
-  shock: 0
-  piercing: 0
+  possibleAbilities:
+  - Piercing
+  - Shock
+  unlockedAbilities: []
