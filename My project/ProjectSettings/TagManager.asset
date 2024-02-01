@@ -7,7 +7,6 @@ TagManager:
   - Points
   - Enemy
   - List
-  - Bullet
   - MainCanvas
   - TowerContainer
   - Path1
@@ -16,6 +15,7 @@ TagManager:
   - Path4
   - Path5
   - BasicTower
+  - BasicBullet
   layers:
   - Default
   - TransparentFX
