@@ -12,8 +12,16 @@ public class TowerBrain : MonoBehaviour
 
     [Header("Shooting Variables")]
     public GameObject bulletPrefab;
+    [SerializeField] GameObject shootSpot;
     [SerializeField] float fireTime;
+    public float attackSpeed;
+    public int attackSpeedLvl;
     [SerializeField] float bulletSpeed;
+    public float baseDamage = 3;
+    public float damageMult;
+    public int damageLvl;
+    public List<string> possibleAbilities = new List<string>();
+    public List<string> unlockedAbilities = new List<string>();
     private Transform target;
 
     //Skill Refrences
@@ -83,17 +91,23 @@ public class TowerBrain : MonoBehaviour
         if (checkTargetInRange())
         {
             Vector3 shootDirection = (target.position - transform.position).normalized;
-            GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, shootSpot.transform.position, Quaternion.identity);
+            applyBuffs(bullet);
             bullet.GetComponent<Rigidbody2D>().velocity = shootDirection * bulletSpeed;
             bullet.transform.right = shootDirection;
             Destroy(bullet, 2);
         }
-        yield return new WaitForSeconds(fireTime);
+        yield return new WaitForSeconds(fireTime/ (1+attackSpeed));
         StartCoroutine(Shoot());
     }
 
     // Shooting End ----------------------------------------------------------------------
 
+    void applyBuffs(GameObject bullet)
+    {
+        bullet.GetComponent<BulletManager>().unlockedAbilities = this.unlockedAbilities;
+        bullet.GetComponent<BulletManager>().baseDamage = this.baseDamage * (damageMult + 1);
+    }
 
     private void OnDrawGizmosSelected()
     {

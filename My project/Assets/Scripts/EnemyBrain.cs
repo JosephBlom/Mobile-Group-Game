@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyBrain : MonoBehaviour
 {
     [Header("Stats")]
-    [SerializeField] int health;
+    [SerializeField] float health;
     [Tooltip("The amount of seconds before the shock effect dissapears")]
     [SerializeField] float unshockTime;
 

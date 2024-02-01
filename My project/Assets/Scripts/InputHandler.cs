@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.UI;
 
 public class InputHandler : MonoBehaviour
 {
     [SerializeField] Animator menuAnimator;
     [SerializeField] TextMeshProUGUI abilityText;
+    [SerializeField] Button abilityButton;
+    [SerializeField] Button damageButton;
+    [SerializeField] Button attackSpeedButton;
 
     private Camera _mainCamera;
     private GameObject selectedTower;
+    private TowerBrain towerBrain;
+    private string nextAbility;
 
     private void Awake()
     {
@@ -24,13 +30,13 @@ public class InputHandler : MonoBehaviour
         if (!rayHit.collider) return;
 
         selectedTower = rayHit.collider.gameObject;
+        towerBrain = rayHit.collider.gameObject.GetComponent<TowerBrain>();
 
         if (rayHit.collider.CompareTag("BasicTower"))
         {
-            BulletManager bullet = GetBullet(rayHit.collider.gameObject);
-            string nextAbility = getNextAbility(bullet);
-            abilityText.text = "Unlock \n" + nextAbility;
-            
+            OpenMenu();
+
+
 
             menuAnimator.SetBool("IsOpen", true);
         }
@@ -39,29 +45,63 @@ public class InputHandler : MonoBehaviour
     public void Close()
     {
         menuAnimator.SetBool("IsOpen", false);
-    }
-
-    private BulletManager GetBullet(GameObject selectedTower)
-    {
-        TowerBrain towerBrain = selectedTower.GetComponent<TowerBrain>();
-        GameObject bullet = towerBrain.bulletPrefab;
-        BulletManager selectedBullet = bullet.GetComponent<BulletManager>();
-        return selectedBullet;
+        abilityButton.interactable = true;
+        damageButton.interactable = true;
+        attackSpeedButton.interactable = true;
     }
 
     public void UnlockAbility()
     {
-        BulletManager bullet = GetBullet(selectedTower);
-        string nextAbility = getNextAbility(bullet);
-        bullet.unlockedAbilities.Add(nextAbility);
+        nextAbility = getNextAbility(towerBrain);
+        towerBrain.unlockedAbilities.Add(nextAbility);
+        nextAbility = getNextAbility(towerBrain);
+        OpenMenu();
     }
 
-    public string getNextAbility(BulletManager bullet)
+    public void IncreaseDamage()
+    {
+        towerBrain.damageMult += 0.3f;
+        towerBrain.damageLvl++;
+        OpenMenu();
+    }
+
+    public void IncreaseAttackSpeed()
+    {
+        towerBrain.attackSpeed += 0.3f;
+        towerBrain.attackSpeedLvl++;
+        OpenMenu();
+    }
+
+    private void OpenMenu()
+    {
+        nextAbility = getNextAbility(towerBrain);
+        if (!(nextAbility == "Max"))
+        {
+            abilityText.text = "Unlock \n" + nextAbility;
+        }
+        else
+        {
+            abilityButton.interactable = false;
+            abilityText.text = nextAbility;
+        }
+
+        if(towerBrain.attackSpeedLvl >= 3)
+        {
+            attackSpeedButton.interactable = false;
+        }
+
+        if (towerBrain.damageLvl >= 3)
+        {
+            damageButton.interactable = false;
+        }
+    }
+
+    public string getNextAbility(TowerBrain tower)
     {
         List<string> notUnlockedAbilites = new List<string>();
-        foreach (string ability in bullet.possibleAbilities)
+        foreach (string ability in tower.possibleAbilities)
         {
-            if (!bullet.unlockedAbilities.Contains(ability))
+            if (!tower.unlockedAbilities.Contains(ability))
             {
                 notUnlockedAbilites.Add(ability);
             }
@@ -70,7 +110,7 @@ public class InputHandler : MonoBehaviour
         {
             return notUnlockedAbilites[0];
         }
-        return "No New Abilties";
+        return "Max";
     }
 
 }
