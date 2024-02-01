@@ -192,9 +192,11 @@ MonoBehaviour:
   shootSpot: {fileID: 4862899836626917925}
   fireTime: 0.5
   attackSpeed: 0
+  attackSpeedLvl: 0
   bulletSpeed: 10
-  damageMult: 0
   baseDamage: 3
+  damageMult: 0
+  damageLvl: 0
   possibleAbilities:
   - Piercing
   - Shock
