@@ -5,9 +5,11 @@ using UnityEngine;
 public class SaveManager : MonoBehaviour
 {
     [SerializeField] Player player;
+    [SerializeField] LoginManager loginManager;
 
     private void Start()
     {
+        loginManager = FindFirstObjectByType<LoginManager>();
         LoadPlayer();
     }
 
@@ -18,16 +20,18 @@ public class SaveManager : MonoBehaviour
 
     public void SavePlayer()
     {
-        SaveSystem.SavePlayer(player);
+        SaveSystem.SavePlayer(player, loginManager.username);
     }
 
     public void LoadPlayer()
     {
-        PlayerData data = SaveSystem.LoadPlayer();
+        PlayerData data = SaveSystem.LoadPlayer(loginManager.username, loginManager.password);
 
         player.unlockedWorlds = data.unlockedWorlds;
         player.beatenLevels = data.beatenLevels;
         player.unlockedTowers = data.unlockedTowers;
+        player.password = data.password;
+        player.username = data.username;
 
     }
 }

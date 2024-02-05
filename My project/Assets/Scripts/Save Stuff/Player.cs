@@ -7,4 +7,6 @@ public class Player : MonoBehaviour
     public string[] unlockedWorlds;
     public string[] beatenLevels;
     public string[] unlockedTowers;
+    public string password;
+    public string username;
 }
