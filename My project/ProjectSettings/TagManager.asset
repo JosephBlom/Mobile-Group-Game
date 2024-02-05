@@ -16,6 +16,8 @@ TagManager:
   - Path5
   - BasicTower
   - BasicBullet
+  - Bullet
+  - CanPlace
   layers:
   - Default
   - TransparentFX

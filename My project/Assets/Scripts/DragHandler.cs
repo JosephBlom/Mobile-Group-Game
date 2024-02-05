@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -7,15 +8,19 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IEndDragHandler, 
 {
     [Header("Variables for spawning towers")]
     [SerializeField] GameObject tower;
+    [SerializeField] Image towerImage;
     [SerializeField] GameObject towerContainer;
 
     [SerializeField] Canvas canvas;
 
     private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
+    private Camera _mainCamera;
+    private bool canPlace = false;
 
     private void Awake()
     {
+        _mainCamera = Camera.main;
         towerContainer = GameObject.FindGameObjectWithTag("TowerContainer");
         canvas = GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<Canvas>();
         rectTransform = GetComponent<RectTransform>();
@@ -28,14 +33,32 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IEndDragHandler, 
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        Destroy(gameObject);
-        GameObject towerObject = Instantiate(tower, rectTransform.position, Quaternion.identity);
-        towerObject.transform.SetParent(towerContainer.transform, true);
-        towerObject.transform.position = Camera.main.ScreenToWorldPoint(rectTransform.position);
-        towerObject.transform.position = new Vector3(towerObject.transform.position.x, towerObject.transform.position.y, 0);
+        if (canPlace)
+        {
+            Destroy(gameObject);
+            GameObject towerObject = Instantiate(tower, rectTransform.position, Quaternion.identity);
+            towerObject.transform.SetParent(towerContainer.transform, true);
+            towerObject.transform.position = Camera.main.ScreenToWorldPoint(rectTransform.position);
+            towerObject.transform.position = new Vector3(towerObject.transform.position.x, towerObject.transform.position.y, 0);
+        }
+        
     }
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Input.mousePosition));
+        if (!rayHit.collider) return;
+
+        if (rayHit.collider.CompareTag("CanPlace"))
+        {
+            canPlace = true;
+        }
+        else
+        {
+            canPlace = false;
+            towerImage.color = new Color(255, 83, 83);
+            canvasGroup.alpha = 0.8078431f;
+            Debug.Log("Here");
+        }
     }
 }

@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tower: {fileID: 8868888333281388338, guid: e5973b602c3e8834bbbe8c2a97b834fb, type: 3}
+  towerImage: {fileID: 2248649125519483417}
   towerContainer: {fileID: 0}
   canvas: {fileID: 0}
 --- !u!225 &8515666547655674221
