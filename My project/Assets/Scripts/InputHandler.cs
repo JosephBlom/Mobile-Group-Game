@@ -35,9 +35,6 @@ public class InputHandler : MonoBehaviour
         if (rayHit.collider.CompareTag("BasicTower"))
         {
             OpenMenu();
-
-
-
             menuAnimator.SetBool("IsOpen", true);
         }
     }
