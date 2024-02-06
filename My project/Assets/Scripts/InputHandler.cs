@@ -14,7 +14,7 @@ public class InputHandler : MonoBehaviour
     [SerializeField] Button attackSpeedButton;
 
     private Camera _mainCamera;
-    private GameObject selectedTower;
+    public GameObject selectedTower;
     private TowerBrain towerBrain;
     private string nextAbility;
 
@@ -29,13 +29,13 @@ public class InputHandler : MonoBehaviour
         var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue()));
         if (!rayHit.collider) return;
 
-        selectedTower = rayHit.collider.gameObject;
-        towerBrain = rayHit.collider.gameObject.GetComponent<TowerBrain>();
 
         if (rayHit.collider.CompareTag("BasicTower"))
         {
-            OpenMenu();
+            selectedTower = rayHit.collider.gameObject;
+            towerBrain = rayHit.collider.gameObject.GetComponent<TowerBrain>();
             menuAnimator.SetBool("IsOpen", true);
+            OpenMenu();
         }
     }
 
