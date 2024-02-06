@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawning : MonoBehaviour
 {
+    [SerializeField] int waveAmount;
 
     public List<Vector3> enemySpawns = new List<Vector3>();
     public List<Enemy> enemies = new List<Enemy>();
@@ -24,29 +25,39 @@ public class EnemySpawning : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (spawnTimer <= 0)
+        if((currWave > waveAmount))
         {
-            if (enemiesToSpawn.Count > 0)
-            {
-                int selectedSpawn = Random.Range(0, enemySpawns.Count);
-                enemiesToSpawn[0].GetComponent<EnemyPathing>().startPosition = selectedSpawn;
-                Instantiate(enemiesToSpawn[0], enemySpawns[selectedSpawn], Quaternion.identity);
-                aliveEnemies.Add(enemiesToSpawn[0]);
-                enemiesToSpawn.RemoveAt(0);
-                spawnTimer = spawnInterval;
-            }
-            else if (aliveEnemies.Count <= 0)
-            {
-                waveTimer = 0;
-                currWave++;
-                GenerateWave();
-            }
+            Debug.Log("End of Level");
+            //Add go to next level code here.
         }
         else
         {
-            spawnTimer -= Time.fixedDeltaTime;
-            waveTimer -= Time.fixedDeltaTime;
+            if (spawnTimer <= 0)
+            {
+                if (enemiesToSpawn.Count > 0)
+                {
+                    int selectedSpawn = Random.Range(0, enemySpawns.Count);
+                    enemiesToSpawn[0].GetComponent<EnemyPathing>().startPosition = selectedSpawn;
+                    Instantiate(enemiesToSpawn[0], enemySpawns[selectedSpawn], Quaternion.identity);
+                    aliveEnemies.Add(enemiesToSpawn[0]);
+                    enemiesToSpawn.RemoveAt(0);
+                    spawnTimer = spawnInterval;
+                }
+                else if (aliveEnemies.Count <= 0)
+                {
+                    waveTimer = 0;
+                    currWave++;
+                    GenerateWave();
+                }
+            }
+            else
+            {
+                spawnTimer -= Time.fixedDeltaTime;
+                waveTimer -= Time.fixedDeltaTime;
+            }
         }
+
+        
     }
 
     public void GenerateWave()

@@ -8,12 +8,11 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IEndDragHandler, 
 {
     [Header("Variables for spawning towers")]
     [SerializeField] GameObject tower;
-    [SerializeField] Image towerImage;
     [SerializeField] GameObject towerContainer;
 
     [SerializeField] Canvas canvas;
 
-    private CanvasGroup canvasGroup;
+    //private CanvasGroup canvasGroup;
     private RectTransform rectTransform;
     private Camera _mainCamera;
     private bool canPlace = false;
@@ -24,12 +23,12 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IEndDragHandler, 
         towerContainer = GameObject.FindGameObjectWithTag("TowerContainer");
         canvas = GameObject.FindGameObjectWithTag("MainCanvas").GetComponent<Canvas>();
         rectTransform = GetComponent<RectTransform>();
-        canvasGroup = GetComponent<CanvasGroup>();
+        //canvasGroup = GetComponent<CanvasGroup>();
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        canvasGroup.alpha = 0.69f;
+        Debug.Log("here");
     }
     public void OnEndDrag(PointerEventData eventData)
     {
@@ -48,7 +47,6 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IEndDragHandler, 
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
         var rayHit = Physics2D.GetRayIntersection(_mainCamera.ScreenPointToRay(Input.mousePosition));
         if (!rayHit.collider) return;
-
         if (rayHit.collider.CompareTag("CanPlace"))
         {
             canPlace = true;
@@ -56,9 +54,6 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IEndDragHandler, 
         else
         {
             canPlace = false;
-            towerImage.color = new Color(255, 83, 83);
-            canvasGroup.alpha = 0.8078431f;
-            Debug.Log("Here");
         }
     }
 }
