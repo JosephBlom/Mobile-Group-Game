@@ -19702,7 +19702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 155627315149118194, guid: e1b67f154779d9842ac741943fa33457, type: 3}
       propertyPath: enemies.Array.size
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 155627315149118194, guid: e1b67f154779d9842ac741943fa33457, type: 3}
+      propertyPath: aliveEnemies.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 155627315149118194, guid: e1b67f154779d9842ac741943fa33457, type: 3}
       propertyPath: enemies.Array.data[1].cost
@@ -19719,7 +19723,7 @@ PrefabInstance:
     - target: {fileID: 155627315149118194, guid: e1b67f154779d9842ac741943fa33457, type: 3}
       propertyPath: enemies.Array.data[2].enemyPrefab
       value: 
-      objectReference: {fileID: 6080822682556119129, guid: 9fe51299f5ca97c48b17f2e5cc98a5c7, type: 3}
+      objectReference: {fileID: 6080822682556119129, guid: 70268384e107ca446b00c3c40a2706ec, type: 3}
     - target: {fileID: 1232006887700567421, guid: e1b67f154779d9842ac741943fa33457, type: 3}
       propertyPath: m_Name
       value: SpawningManager
