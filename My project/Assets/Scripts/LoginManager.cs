@@ -28,7 +28,7 @@ public class LoginManager : MonoBehaviour
             else
             {
                 SaveSystem.CreateAccount(player, username, password);
-                SceneManager.LoadScene("JosephScene");
+                FindObjectOfType<Animator>().SetBool("IsOpen", true);
             }
         }
         else
