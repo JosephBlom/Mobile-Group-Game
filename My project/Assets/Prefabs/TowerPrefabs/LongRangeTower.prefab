@@ -151,7 +151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -60321509, guid: 69dcca21e0b6a034e976c44eb749c226, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   targetingRange: 5
   enemyMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   rotateSpeed: 400
   bulletPrefab: {fileID: 7508395532961340905, guid: 574a355a74425194885eea73a96d560e, type: 3}
   shootSpot: {fileID: 953040492884060662}

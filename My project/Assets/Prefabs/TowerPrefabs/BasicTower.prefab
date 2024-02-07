@@ -200,6 +200,7 @@ MonoBehaviour:
   possibleAbilities:
   - Piercing
   - Shock
+  - HomingBullets
   unlockedAbilities: []
 --- !u!61 &-7674835693970659501
 BoxCollider2D:
