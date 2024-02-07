@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: -5481144985501328833}
   enemySpawning: {fileID: 0}
+  rotateSpeed: 400
   travelPoints:
   - {fileID: 0}
   - {fileID: 0}

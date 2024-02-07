@@ -7,6 +7,7 @@ public class EnemyPathing : MonoBehaviour
 
     [SerializeField] Rigidbody2D rb;
     [SerializeField] EnemySpawning enemySpawning;
+    [SerializeField] float rotateSpeed = 400;
 
     public Transform[] travelPoints;
     public float moveSpeed;
@@ -32,10 +33,12 @@ public class EnemyPathing : MonoBehaviour
         if (shocked)
         {
             rb.velocity = direction * (moveSpeed/2);
+            rotateToPoint();
         }
         else
         {
             rb.velocity = direction * moveSpeed;
+            rotateToPoint();
         }
         
         if (Vector2.Distance(transform.position, travelPoints[nextPosition].position) < 0.2f)
@@ -46,6 +49,13 @@ public class EnemyPathing : MonoBehaviour
                 nextPosition = travelPoints.Length - 1;
             }
         }
+    }
+
+    private void rotateToPoint()
+    {
+        float angle = Mathf.Atan2(travelPoints[nextPosition].position.y - transform.position.y, travelPoints[nextPosition].position.x - transform.position.x) * Mathf.Rad2Deg;
+        Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
     }
 
     public IEnumerator resetSpeed(float unshockTime)
