@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2248649125519483417}
   - component: {fileID: 2181048928270782832}
   m_Layer: 5
-  m_Name: FakeTower
+  m_Name: BasicTowerCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
