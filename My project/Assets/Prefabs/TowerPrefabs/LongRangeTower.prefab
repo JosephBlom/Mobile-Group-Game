@@ -176,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetingRange: 5
+  targetingRangeLvl: 0
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
@@ -189,5 +190,7 @@ MonoBehaviour:
   baseDamage: 9
   damageMult: 0
   damageLvl: 0
-  possibleAbilities: []
+  possibleAbilities:
+  - Piercing
+  - Shock
   unlockedAbilities: []

@@ -10,6 +10,8 @@ public class EnemyBrain : MonoBehaviour
     [SerializeField] float unshockTime;
     [Tooltip("The amount of damage that this enemy will do to the tower.")]
     [SerializeField] float damage;
+    [Tooltip("If the enemy is on fire.")]
+    [SerializeField] bool onFire = false;
 
     EnemyPathing enemyPathing;
     EnemySpawning enemySpawning;
@@ -18,6 +20,14 @@ public class EnemyBrain : MonoBehaviour
     {
         enemyPathing = GetComponent<EnemyPathing>();
         enemySpawning = FindFirstObjectByType<EnemySpawning>();
+    }
+
+    private void FixedUpdate()
+    {
+        if (onFire)
+        {
+            health -= 0.2f;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,6 +53,10 @@ public class EnemyBrain : MonoBehaviour
             else
             {
                 Destroy(collision.gameObject);
+            }
+            if (bulletManager.unlockedAbilities.Contains("FireShot"))
+            {
+                onFire = true;
             }
         }
     }
