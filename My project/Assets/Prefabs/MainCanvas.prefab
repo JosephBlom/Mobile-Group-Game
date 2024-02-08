@@ -117,9 +117,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9874491ad31bda74fa2ecbc8556bd9d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCanvas: {fileID: 0}
-  shopCanvas: {fileID: 0}
-  ship1: {fileID: 0}
+  mainCanvas: {fileID: 835887335368758230}
+  shopCanvas: {fileID: 9054198659826743338}
+  basicTower: {fileID: 2641732077224007064, guid: dd16fd60718b44941aea563a961b0313, type: 3}
+  longRangeTower: {fileID: 7777048579094749495, guid: 555d115de86c82c448c22dbc65dbeba1, type: 3}
+  heavyTower: {fileID: 2630037270358343058, guid: d91c78fa07204cb49b45b4e067805242, type: 3}
 --- !u!1001 &867948969254235013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -304,6 +306,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -20
       objectReference: {fileID: 0}
+    - target: {fileID: 4765270424157386993, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765270424157386993, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765270424157386993, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -8535868741661211042}
+    - target: {fileID: 4765270424157386993, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765270424157386993, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyHeavyTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765270424157386993, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4765270424157386993, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5516626093493056044, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -336,6 +366,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7568665376847819398, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -8535868741661211042}
+    - target: {fileID: 7568665376847819398, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyBasicTower
+      objectReference: {fileID: 0}
     - target: {fileID: 8174576416091211788, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -351,6 +389,42 @@ PrefabInstance:
     - target: {fileID: 8174576416091211788, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260153132312947220, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260153132312947220, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260153132312947220, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -8535868741661211042}
+    - target: {fileID: 8260153132312947220, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260153132312947220, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyLongRangeTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260153132312947220, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8260153132312947220, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783950805395938706, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: -8535868741661211042}
+    - target: {fileID: 8783950805395938706, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseShop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -361,6 +435,11 @@ PrefabInstance:
 --- !u!224 &1683678398631587967 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1969817311057517562, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
+  m_PrefabInstance: {fileID: 867948969254235013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &9054198659826743338 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8191321256777929647, guid: 7a9b5d6d015500b45a7f736c28637436, type: 3}
   m_PrefabInstance: {fileID: 867948969254235013}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1694957821229754456
@@ -601,21 +680,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1481666241572189955, guid: f34663424fcec784393911cd04a15e3c, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1481666241572189955, guid: f34663424fcec784393911cd04a15e3c, type: 3}
-      propertyPath: m_Sprite
+    - target: {fileID: 2936466074955120423, guid: f34663424fcec784393911cd04a15e3c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 21300000, guid: eea75ba7cb0dd654f8346b4154388fae, type: 3}
+      objectReference: {fileID: -8535868741661211042}
     - target: {fileID: 6137032026697761966, guid: f34663424fcec784393911cd04a15e3c, type: 3}
       propertyPath: m_Name
       value: OpenShop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 2825914231166836943, guid: f34663424fcec784393911cd04a15e3c, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f34663424fcec784393911cd04a15e3c, type: 3}
