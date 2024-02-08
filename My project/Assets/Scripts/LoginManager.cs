@@ -54,7 +54,7 @@ public class LoginManager : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene("JosephScene");
+                    SceneManager.LoadScene("LevelSelect");
                 }
             }
         }
