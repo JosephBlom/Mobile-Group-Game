@@ -30,7 +30,7 @@ public class InputHandler : MonoBehaviour
         if (!rayHit.collider) return;
 
 
-        if (rayHit.collider.CompareTag("BasicTower"))
+        if (rayHit.collider.CompareTag("Tower"))
         {
             selectedTower = rayHit.collider.gameObject;
             towerBrain = rayHit.collider.gameObject.GetComponent<TowerBrain>();
