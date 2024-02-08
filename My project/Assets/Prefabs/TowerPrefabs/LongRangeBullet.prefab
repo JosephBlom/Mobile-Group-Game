@@ -187,5 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 9
-  possibleAbilities: []
+  possibleAbilities:
+  - Piercing
+  - Shock
   unlockedAbilities: []

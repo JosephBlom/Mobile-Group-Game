@@ -53,7 +53,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        SceneManager.LoadScene("JosephScene");
+        SceneManager.LoadScene("LevelSelect");
     }
 
 }

@@ -30,7 +30,7 @@ public class InputHandler : MonoBehaviour
         if (!rayHit.collider) return;
 
 
-        if (rayHit.collider.CompareTag("BasicTower"))
+        if (rayHit.collider.CompareTag("Tower"))
         {
             selectedTower = rayHit.collider.gameObject;
             towerBrain = rayHit.collider.gameObject.GetComponent<TowerBrain>();
@@ -69,12 +69,6 @@ public class InputHandler : MonoBehaviour
         OpenMenu();
     }
 
-    public void IncreaseRange()
-    {
-        towerBrain.targetingRange++;
-        towerBrain.targetingRangeLvl++;
-        OpenMenu();
-    }
 
     private void OpenMenu()
     {

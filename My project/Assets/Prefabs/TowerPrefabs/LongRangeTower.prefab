@@ -87,10 +87,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6296829854535128557}
   - component: {fileID: 5947334495296668008}
+  - component: {fileID: -5698629640891909108}
   - component: {fileID: 5845091688073429848}
   m_Layer: 0
   m_Name: LongRangeTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,6 +164,61 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &-5698629640891909108
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247561949199171639}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.265625, y: -0.046875}
+      - {x: 0.078125, y: 0.328125}
+      - {x: -0.171875, y: 0.328125}
+      - {x: -0.484375, y: 0.21875}
+      - {x: -0.5, y: 0.1875}
+      - {x: -0.5, y: -0.15625}
+      - {x: -0.375, y: -0.3125}
+      - {x: 0.5, y: -0.3125}
+      - {x: 0.5, y: -0.09375}
+      - {x: 0.484375, y: -0.046875}
+  m_UseDelaunayMesh: 0
 --- !u!114 &5845091688073429848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetingRange: 5
+  targetingRangeLvl: 0
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
@@ -189,5 +246,7 @@ MonoBehaviour:
   baseDamage: 9
   damageMult: 0
   damageLvl: 0
-  possibleAbilities: []
+  possibleAbilities:
+  - Piercing
+  - Shock
   unlockedAbilities: []

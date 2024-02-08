@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: -7674835693970659501}
   m_Layer: 0
   m_Name: BasicTower
-  m_TagString: BasicTower
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetingRange: 3
+  targetingRangeLvl: 0
   enemyMask:
     serializedVersion: 2
     m_Bits: 64

@@ -14,10 +14,10 @@ TagManager:
   - Path3
   - Path4
   - Path5
-  - BasicTower
   - BasicBullet
   - Bullet
   - CanPlace
+  - Tower
   layers:
   - Default
   - TransparentFX
