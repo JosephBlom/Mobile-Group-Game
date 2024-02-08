@@ -14,4 +14,28 @@ public class NavigateMenu : MonoBehaviour
     {
         SceneManager.LoadScene("MarsMenu");
     }
+    public void GoToEarthLevels()
+    {
+        SceneManager.LoadScene("EarthMenu");
+    }
+    public void GoToNeptuneLevels()
+    {
+        SceneManager.LoadScene("NeptuneMenu");
+    }
+    public void GoToSaturnLevels()
+    {
+        SceneManager.LoadScene("SaturnMenu");
+    }
+    public void GoToJupiterLevels()
+    {
+        SceneManager.LoadScene("JupiterMenu");
+    }
+    public void GoToUranusLevels()
+    {
+        SceneManager.LoadScene("UranusMenu");
+    }
+    public void GoToVenusLevels()
+    {
+        SceneManager.LoadScene("VenusMenu");
+    }
 }
