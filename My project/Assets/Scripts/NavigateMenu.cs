@@ -38,4 +38,17 @@ public class NavigateMenu : MonoBehaviour
     {
         SceneManager.LoadScene("VenusMenu");
     }
+
+    public void GoToMercuryLevel1()
+    {
+        SceneManager.LoadScene("Mercury 1");
+    }
+    public void GoToMercuryLevel2()
+    {
+        SceneManager.LoadScene("Mercury 2");
+    }
+    public void GoToMercuryLevel3()
+    {
+        SceneManager.LoadScene("Mercury 3");
+    }
 }
