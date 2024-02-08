@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemySpawning : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class EnemySpawning : MonoBehaviour
     {
         if((currWave > waveAmount))
         {
-            Debug.Log("End of Level");
+            SceneManager.LoadScene("LevelSelect");
             //Add go to next level code here.
         }
         else
