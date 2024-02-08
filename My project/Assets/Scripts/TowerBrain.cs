@@ -6,7 +6,8 @@ using UnityEditor;
 public class TowerBrain : MonoBehaviour
 {
     [Header("Tracking Variables")]
-    [SerializeField] float targetingRange;
+    public float targetingRange;
+    public int targetingRangeLvl;
     [SerializeField] LayerMask enemyMask;
     [SerializeField] int rotateSpeed;
 

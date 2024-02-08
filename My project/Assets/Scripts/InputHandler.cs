@@ -69,6 +69,13 @@ public class InputHandler : MonoBehaviour
         OpenMenu();
     }
 
+    public void IncreaseRange()
+    {
+        towerBrain.targetingRange++;
+        towerBrain.targetingRangeLvl++;
+        OpenMenu();
+    }
+
     private void OpenMenu()
     {
         nextAbility = getNextAbility(towerBrain);
