@@ -84,10 +84,10 @@ EditorBuildSettings:
     path: Assets/Scenes/SaturnLevels/Saturn 3.unity
     guid: dd958c805bf0ef140bc59d5dc86f59fc
   - enabled: 1
-    path: Assets/Scenes/UranusLevels/Uranus 1.unity
+    path: Assets/Scenes/UranusLevels/Uranus 2.unity
     guid: 3a7c59fbc82ddb540861c770de025e96
   - enabled: 1
-    path: Assets/Scenes/UranusLevels/Uranus 2.unity
+    path: Assets/Scenes/UranusLevels/Uranus 1.unity
     guid: 26fb7d4ff0b758d48ac2e82afb4b12a8
   - enabled: 1
     path: Assets/Scenes/UranusLevels/Uranus 3.unity
@@ -102,6 +102,6 @@ EditorBuildSettings:
     path: Assets/Scenes/VenusLevels/Venus 3.unity
     guid: 6980f2e32dc97c7489a85ead3845f583
   - enabled: 1
-    path: Assets/Scenes/NeptuneLevels/Neptune 1.unity
+    path: Assets/Scenes/NeptuneLevels/Neptune 3.unity
     guid: 15c2a2d4ed32a3b40a7613ca940c7ca8
   m_configObjects: {}
