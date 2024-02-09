@@ -18,9 +18,29 @@ public class InputHandler : MonoBehaviour
     private TowerBrain towerBrain;
     private string nextAbility;
 
+    Vector3 worldPosition;
+    Vector2 screenPosition;
+
     private void Awake()
     {
         _mainCamera = Camera.main;
+    }
+
+    private void FixedUpdate()
+    {
+        if(Input.touchCount > 0)
+        {
+            screenPosition = Input.GetTouch(0).position;
+            worldPosition = _mainCamera.ScreenToWorldPoint(screenPosition);
+            RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
+            if(hit.collider != null && hit.collider.CompareTag("Tower"))
+            {
+                selectedTower = hit.collider.gameObject; 
+                towerBrain = hit.collider.gameObject.GetComponent<TowerBrain>();
+                menuAnimator.SetBool("IsOpen", true);
+                OpenMenu();
+            }
+        }
     }
 
     public void OnClick(InputAction.CallbackContext context)
