@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragHandler : MonoBehaviour, IPointerDownHandler, IEndDragHandler, IDragHandler
+public class DragHandler : MonoBehaviour, IEndDragHandler, IDragHandler
 {
     [Header("Variables for spawning towers")]
     [SerializeField] GameObject tower;
@@ -17,6 +17,7 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IEndDragHandler, 
     private Camera _mainCamera;
     private bool canPlace = false;
 
+
     private void Awake()
     {
         _mainCamera = Camera.main;
@@ -26,10 +27,6 @@ public class DragHandler : MonoBehaviour, IPointerDownHandler, IEndDragHandler, 
         //canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Debug.Log("here");
-    }
     public void OnEndDrag(PointerEventData eventData)
     {
         if (canPlace)
