@@ -4452,7 +4452,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: -10}
+  m_LocalPosition: {x: 0.26, y: -0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23411,6 +23411,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: IncreaseDamage
       objectReference: {fileID: 0}
+    - target: {fileID: 1601314755244291858, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1758101455004001649, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -23430,6 +23434,18 @@ PrefabInstance:
     - target: {fileID: 2097705511746307107, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
       propertyPath: m_Name
       value: MainCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099739651571346441, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099739651571346441, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099739651571346441, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2114895237459819475, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -23598,6 +23614,18 @@ PrefabInstance:
     - target: {fileID: 8114683633079136998, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887770468849153944, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887770468849153944, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 8887770468849153944, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 768
       objectReference: {fileID: 0}
     - target: {fileID: 9041678898495464329, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
       propertyPath: m_AnchorMax.y

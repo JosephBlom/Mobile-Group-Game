@@ -48,13 +48,13 @@ EditorBuildSettings:
     path: Assets/Scenes/EarthLevels/Earth 3.unity
     guid: 9e2e9766ac48ee94caebfdb0c2ac41c5
   - enabled: 1
-    path: Assets/Scenes/JupiterLevels/Jupiter 1.unity
+    path: Assets/Scenes/MarsLevels/JupiterLevels/Jupiter 1.unity
     guid: 94a01096f5c240340a99742e2fb9edce
   - enabled: 1
-    path: Assets/Scenes/JupiterLevels/Jupiter 2.unity
+    path: Assets/Scenes/MarsLevels/JupiterLevels/Jupiter 2.unity
     guid: c0576520f7d44364887aadf08e63d11d
   - enabled: 1
-    path: Assets/Scenes/JupiterLevels/Jupiter 3.unity
+    path: Assets/Scenes/MarsLevels/JupiterLevels/Jupiter 3.unity
     guid: 2f371667bf1926043ad0d0745360cf00
   - enabled: 1
     path: Assets/Scenes/MarsLevels/Mars 1.unity
