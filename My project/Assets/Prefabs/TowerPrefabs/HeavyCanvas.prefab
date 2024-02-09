@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4186896686509042103}
   - component: {fileID: 9050492320332061852}
   - component: {fileID: 4611623036430331118}
+  - component: {fileID: 2631775823849810855}
   m_Layer: 5
   m_Name: HeavyCanvas
   m_TagString: Untagged
@@ -91,3 +92,15 @@ MonoBehaviour:
   tower: {fileID: 2371871300248335992, guid: 3fdef5dbfed2a3a499afec572d49609a, type: 3}
   towerContainer: {fileID: 0}
   canvas: {fileID: 0}
+--- !u!114 &2631775823849810855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7777048579094749495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a77da25371f7341a0a55e7359abf6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
