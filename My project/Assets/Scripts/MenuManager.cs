@@ -10,8 +10,13 @@ public class MenuManager : MonoBehaviour
     [Tooltip("This is the canvas that has the store for towers.")]
     [SerializeField] Canvas shopCanvas;
 
-    [Header("Ship Prefabs")]
-    [SerializeField] GameObject ship1;
+    [Header("Tower Prefabs")]
+    [Tooltip("This Should Be the Canvas Object For The Tower Not The Actualy Tower.")]
+    [SerializeField] GameObject basicTower;
+    [Tooltip("This Should Be the Canvas Object For The Tower Not The Actualy Tower.")]
+    [SerializeField] GameObject longRangeTower;
+    [Tooltip("This Should Be the Canvas Object For The Tower Not The Actualy Tower.")]
+    [SerializeField] GameObject heavyTower;
 
     public void DisableCanvas()
     {
@@ -33,9 +38,21 @@ public class MenuManager : MonoBehaviour
         shopCanvas.enabled = false;
     }
 
-    public void BuyShip1()
+    public void BuyBasicTower()
     {
-        GameObject ship = Instantiate(ship1, new Vector3(0, 0, 0), Quaternion.identity);
+        GameObject ship = Instantiate(basicTower, new Vector3(0, 0, 0), Quaternion.identity);
+        ship.transform.SetParent(mainCanvas.transform, false);
+    }
+
+    public void BuyLongRangeTower()
+    {
+        GameObject ship = Instantiate(longRangeTower, new Vector3(0, 0, 0), Quaternion.identity);
+        ship.transform.SetParent(mainCanvas.transform, false);
+    }
+
+    public void BuyHeavyTower()
+    {
+        GameObject ship = Instantiate(heavyTower, new Vector3(0, 0, 0), Quaternion.identity);
         ship.transform.SetParent(mainCanvas.transform, false);
     }
 }

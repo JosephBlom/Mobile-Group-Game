@@ -6,12 +6,102 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Login.unity
     guid: 7b91e25634ef0cd4bb23e0baa587f855
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: e89c0e576906838478852baed934311a
   - enabled: 1
     path: Assets/Scenes/JosephScene.unity
     guid: cc0ff7e4f5be2db429b58a9dbdda922d
+  - enabled: 1
+    path: Assets/Scenes/WorldMenus/EarthMenu.unity
+    guid: 14ed6f7657ea5eb448be17944e770bf5
+  - enabled: 1
+    path: Assets/Scenes/WorldMenus/JupiterMenu.unity
+    guid: acf3728479f7b34419e7ee27ce39eb7c
+  - enabled: 1
+    path: Assets/Scenes/WorldMenus/MarsMenu.unity
+    guid: dcf7381a7b9d7244aabe832dbcf5d550
+  - enabled: 1
+    path: Assets/Scenes/WorldMenus/MercuryMenu.unity
+    guid: d0dd31dfbb1fe814b9c842ec966e9a74
+  - enabled: 1
+    path: Assets/Scenes/WorldMenus/NeptuneMenu.unity
+    guid: a8fb2c2fab7694342bce23bbf844f093
+  - enabled: 1
+    path: Assets/Scenes/WorldMenus/SaturnMenu.unity
+    guid: 5742105ad121b66478f8a8d5f36f3406
+  - enabled: 1
+    path: Assets/Scenes/WorldMenus/UranusMenu.unity
+    guid: c06d2f19647ea9545ac4f9fc9cf3f627
+  - enabled: 1
+    path: Assets/Scenes/WorldMenus/VenusMenu.unity
+    guid: abb9a57a92800c247a5f0a566cefc8f8
+  - enabled: 1
+    path: Assets/Scenes/EarthLevels/Earth 1.unity
+    guid: c874b56cb70d1734c9028cbb4894b478
+  - enabled: 1
+    path: Assets/Scenes/EarthLevels/Earth 2.unity
+    guid: 67904f24d7ec48f42bfa2b27aca350a5
+  - enabled: 1
+    path: Assets/Scenes/EarthLevels/Earth 3.unity
+    guid: 9e2e9766ac48ee94caebfdb0c2ac41c5
+  - enabled: 1
+    path: Assets/Scenes/JupiterLevels/Jupiter 1.unity
+    guid: 94a01096f5c240340a99742e2fb9edce
+  - enabled: 1
+    path: Assets/Scenes/JupiterLevels/Jupiter 2.unity
+    guid: c0576520f7d44364887aadf08e63d11d
+  - enabled: 1
+    path: Assets/Scenes/JupiterLevels/Jupiter 3.unity
+    guid: 2f371667bf1926043ad0d0745360cf00
+  - enabled: 1
+    path: Assets/Scenes/MarsLevels/Mars 1.unity
+    guid: 62ad0168dd192e84d838351803b8b8ae
+  - enabled: 1
+    path: Assets/Scenes/MarsLevels/Mars 2.unity
+    guid: c8117ce808f5a2c40895fe4066c735fb
+  - enabled: 1
+    path: Assets/Scenes/MarsLevels/Mars 3.unity
+    guid: 06a1137d5fd475545b21c3a389471d5e
+  - enabled: 1
+    path: Assets/Scenes/MercuryLevels/Mercury 1.unity
+    guid: a909a9a6549bd8441af94ab3cab084b5
+  - enabled: 1
+    path: Assets/Scenes/MercuryLevels/Mercury 2.unity
+    guid: a80bf64e10783444d824e9669c36da9f
+  - enabled: 1
+    path: Assets/Scenes/MercuryLevels/Mercury 3.unity
+    guid: 7d1c91adf2998ed46a306e0717085a7e
+  - enabled: 1
+    path: Assets/Scenes/SaturnLevels/Saturn 1.unity
+    guid: 06cddee89c97de34893db3d709127d07
+  - enabled: 1
+    path: Assets/Scenes/SaturnLevels/Saturn 2.unity
+    guid: 8f64014161e89174a80f40eb12fbeed2
+  - enabled: 1
+    path: Assets/Scenes/SaturnLevels/Saturn 3.unity
+    guid: dd958c805bf0ef140bc59d5dc86f59fc
+  - enabled: 1
+    path: Assets/Scenes/UranusLevels/Uranus 1.unity
+    guid: 3a7c59fbc82ddb540861c770de025e96
+  - enabled: 1
+    path: Assets/Scenes/UranusLevels/Uranus 2.unity
+    guid: 26fb7d4ff0b758d48ac2e82afb4b12a8
+  - enabled: 1
+    path: Assets/Scenes/UranusLevels/Uranus 3.unity
+    guid: 2955dc76802f9e14ea97db66426c9ad7
+  - enabled: 1
+    path: Assets/Scenes/VenusLevels/Venus 1.unity
+    guid: a1c5fc379fe40df4aa4bd988d3d60fb8
+  - enabled: 1
+    path: Assets/Scenes/VenusLevels/Venus 2.unity
+    guid: 1313afd28d4cae246b9f66f76f93c26c
+  - enabled: 1
+    path: Assets/Scenes/VenusLevels/Venus 3.unity
+    guid: 6980f2e32dc97c7489a85ead3845f583
+  - enabled: 1
+    path: Assets/Scenes/NeptuneLevels/Neptune 1.unity
+    guid: 15c2a2d4ed32a3b40a7613ca940c7ca8
   m_configObjects: {}

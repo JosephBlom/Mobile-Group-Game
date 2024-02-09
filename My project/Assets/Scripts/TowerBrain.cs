@@ -6,7 +6,8 @@ using UnityEditor;
 public class TowerBrain : MonoBehaviour
 {
     [Header("Tracking Variables")]
-    [SerializeField] float targetingRange;
+    public float targetingRange;
+    public int targetingRangeLvl;
     [SerializeField] LayerMask enemyMask;
     [SerializeField] int rotateSpeed;
 
@@ -109,11 +110,11 @@ public class TowerBrain : MonoBehaviour
         bullet.GetComponent<BulletManager>().baseDamage = this.baseDamage * (damageMult + 1);
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
-    }
+    //private void OnDrawGizmosSelected()
+    //{
+    //    Handles.color = Color.cyan;
+    //    Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+    //}
 
 
 }
