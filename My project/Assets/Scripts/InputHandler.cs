@@ -21,8 +21,11 @@ public class InputHandler : MonoBehaviour
     Vector3 worldPosition;
     Vector2 screenPosition;
 
+    Coins playerBank;
+
     private void Awake()
     {
+        playerBank = FindObjectOfType<Coins>();
         _mainCamera = Camera.main;
     }
 
@@ -69,24 +72,46 @@ public class InputHandler : MonoBehaviour
 
     public void UnlockAbility()
     {
-        nextAbility = getNextAbility(towerBrain);
-        towerBrain.unlockedAbilities.Add(nextAbility);
-        nextAbility = getNextAbility(towerBrain);
-        OpenMenu();
+        if(playerBank.coinTotal >= (towerBrain.unlockedAbilities.Count * 200))
+        {
+            nextAbility = getNextAbility(towerBrain);
+            towerBrain.unlockedAbilities.Add(nextAbility);
+            nextAbility = getNextAbility(towerBrain);
+            OpenMenu();
+        }
+        else
+        {
+            Debug.Log("This Upgrade is Too Expensive!");
+        }
     }
 
     public void IncreaseDamage()
     {
-        towerBrain.damageMult += 0.3f;
-        towerBrain.damageLvl++;
-        OpenMenu();
+        if(playerBank.coinTotal >= (towerBrain.damageLvl * 100))
+        {
+            towerBrain.damageMult += 0.3f;
+            towerBrain.damageLvl++;
+            OpenMenu();
+        }
+        else
+        {
+            Debug.Log("This Upgrade is Too Expensive!");
+        }
+        
     }
 
     public void IncreaseAttackSpeed()
     {
-        towerBrain.attackSpeed += 0.3f;
-        towerBrain.attackSpeedLvl++;
-        OpenMenu();
+        if(playerBank.coinTotal >= (towerBrain.attackSpeedLvl * 100))
+        {
+            towerBrain.attackSpeed += 0.3f;
+            towerBrain.attackSpeedLvl++;
+            OpenMenu();
+        }
+        else
+        {
+            Debug.Log("This Upgrade is Too Expensive!");
+        } 
     }
 
 

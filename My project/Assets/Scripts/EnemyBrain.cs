@@ -12,12 +12,16 @@ public class EnemyBrain : MonoBehaviour
     [SerializeField] float damage;
     [Tooltip("If the enemy is on fire.")]
     [SerializeField] bool onFire = false;
+    [Tooltip("Amount of coins dropped on death.")]
+    [SerializeField] int coins;
 
     EnemyPathing enemyPathing;
     EnemySpawning enemySpawning;
+    Coins coin;
 
     private void Start()
     {
+        coin = FindObjectOfType<Coins>();
         enemyPathing = GetComponent<EnemyPathing>();
         enemySpawning = FindFirstObjectByType<EnemySpawning>();
     }
@@ -40,6 +44,7 @@ public class EnemyBrain : MonoBehaviour
             {
                 enemySpawning.aliveEnemies.RemoveAt(0);
                 Destroy(gameObject);
+                coin.addCoins(coins);
             }
             else if (bulletManager.unlockedAbilities.Contains("Shock"))
             {

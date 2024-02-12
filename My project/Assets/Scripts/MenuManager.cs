@@ -17,6 +17,19 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject longRangeTower;
     [Tooltip("This Should Be the Canvas Object For The Tower Not The Actualy Tower.")]
     [SerializeField] GameObject heavyTower;
+    [Tooltip("This Should Be the Actual Object For The Tower Not The Actualy Tower.")]
+    [SerializeField] GameObject basicTowerObject;
+    [Tooltip("This Should Be the Actual Object For The Tower Not The Actualy Tower.")]
+    [SerializeField] GameObject longRangeTowerObject;
+    [Tooltip("This Should Be the Actual Object For The Tower Not The Actualy Tower.")]
+    [SerializeField] GameObject heavyTowerObject;
+
+    Coins playerBank;
+
+    private void Awake()
+    {
+        playerBank = FindObjectOfType<Coins>();
+    }
 
     public void DisableCanvas()
     {
@@ -40,19 +53,43 @@ public class MenuManager : MonoBehaviour
 
     public void BuyBasicTower()
     {
-        GameObject ship = Instantiate(basicTower, new Vector3(0, 0, 0), Quaternion.identity);
-        ship.transform.SetParent(mainCanvas.transform, false);
+        if (playerBank.coinTotal >= basicTowerObject.GetComponent<TowerBrain>().cost)
+        {
+            GameObject ship = Instantiate(basicTower, new Vector3(0, 0, 0), Quaternion.identity);
+            ship.transform.SetParent(mainCanvas.transform, false);
+            playerBank.subtractCoins(basicTowerObject.GetComponent<TowerBrain>().cost);
+        }
+        else
+        {
+            Debug.Log("This Tower is Too Expensive!");
+        }
     }
 
     public void BuyLongRangeTower()
     {
-        GameObject ship = Instantiate(longRangeTower, new Vector3(0, 0, 0), Quaternion.identity);
-        ship.transform.SetParent(mainCanvas.transform, false);
+        if (playerBank.coinTotal >= longRangeTowerObject.GetComponent<TowerBrain>().cost)
+        {
+            GameObject ship = Instantiate(longRangeTower, new Vector3(0, 0, 0), Quaternion.identity);
+            ship.transform.SetParent(mainCanvas.transform, false);
+            playerBank.subtractCoins(longRangeTowerObject.GetComponent<TowerBrain>().cost);
+        }
+        else
+        {
+            Debug.Log("This Tower is Too Expensive!");
+        }
     }
 
     public void BuyHeavyTower()
     {
-        GameObject ship = Instantiate(heavyTower, new Vector3(0, 0, 0), Quaternion.identity);
-        ship.transform.SetParent(mainCanvas.transform, false);
+        if(playerBank.coinTotal >= heavyTowerObject.GetComponent<TowerBrain>().cost)
+        {
+            GameObject ship = Instantiate(heavyTower, new Vector3(0, 0, 0), Quaternion.identity);
+            ship.transform.SetParent(mainCanvas.transform, false);
+            playerBank.subtractCoins(heavyTowerObject.GetComponent<TowerBrain>().cost);
+        }
+        else
+        {
+            Debug.Log("This Tower is Too Expensive!");
+        }
     }
 }

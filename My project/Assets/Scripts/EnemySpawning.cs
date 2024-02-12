@@ -19,8 +19,12 @@ public class EnemySpawning : MonoBehaviour
     private float spawnInterval;
     private float spawnTimer;
 
+    int coinsPerWave = 200;
+    Coins coin;
+
     void Start()
     {
+        coin = FindObjectOfType<Coins>();
         GenerateWave();
     }
 
@@ -47,6 +51,8 @@ public class EnemySpawning : MonoBehaviour
                 else if (aliveEnemies.Count <= 0)
                 {
                     waveTimer = 0;
+                    coin.addCoins(coinsPerWave);
+                    coinsPerWave += 50;
                     currWave++;
                     GenerateWave();
                 }

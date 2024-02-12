@@ -111,7 +111,7 @@ MonoBehaviour:
   - {fileID: 0}
   moveSpeed: 3
   nextPosition: 0
-  startPosition: 1
+  startPosition: 0
   shocked: 0
 --- !u!114 &-4602938422564393814
 MonoBehaviour:
@@ -128,6 +128,8 @@ MonoBehaviour:
   health: 9
   unshockTime: 2
   damage: 0
+  onFire: 0
+  coins: 30
 --- !u!50 &-5481144985501328833
 Rigidbody2D:
   serializedVersion: 4
