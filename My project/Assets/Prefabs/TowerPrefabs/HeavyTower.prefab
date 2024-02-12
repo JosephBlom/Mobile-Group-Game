@@ -172,6 +172,7 @@ MonoBehaviour:
   baseDamage: 15
   damageMult: 0
   damageLvl: 0
+  cost: 700
   possibleAbilities:
   - Piercing
   - FireShot

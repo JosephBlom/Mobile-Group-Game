@@ -21,6 +21,9 @@ public class TowerBrain : MonoBehaviour
     public float baseDamage = 3;
     public float damageMult;
     public int damageLvl;
+
+    [Header("Extra Variables")]
+    public int cost;
     public List<string> possibleAbilities = new List<string>();
     public List<string> unlockedAbilities = new List<string>();
     private Transform target;
