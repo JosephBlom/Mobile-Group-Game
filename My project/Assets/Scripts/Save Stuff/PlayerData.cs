@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerData
 {
     public string[] unlockedWorlds;
-    public string[] beatenLevels;
+    public string[] unlockedLevels;
     public string[] unlockedTowers;
     public string password;
     public string username;
@@ -14,7 +14,7 @@ public class PlayerData
     public PlayerData(Player player)
     {
         unlockedWorlds = player.unlockedWorlds;
-        beatenLevels = player.beatenLevels;
+        unlockedLevels = player.unlockedLevels;
         unlockedTowers = player.unlockedTowers;
         password = player.password;
         username = player.username;

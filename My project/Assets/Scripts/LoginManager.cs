@@ -29,6 +29,8 @@ public class LoginManager : MonoBehaviour
             {
                 SaveSystem.CreateAccount(player, username, password);
                 FindObjectOfType<Animator>().SetBool("IsOpen", true);
+                FindObjectOfType<Player>().unlockedWorlds[0] = "Mercury";
+                FindObjectOfType<Player>().unlockedLevels[0] = "Mercury 1";
             }
         }
         else

@@ -28,7 +28,7 @@ public class SaveManager : MonoBehaviour
         PlayerData data = SaveSystem.LoadPlayer(loginManager.username, loginManager.password);
 
         player.unlockedWorlds = data.unlockedWorlds;
-        player.beatenLevels = data.beatenLevels;
+        player.unlockedLevels = data.unlockedLevels;
         player.unlockedTowers = data.unlockedTowers;
         player.password = data.password;
         player.username = data.username;
