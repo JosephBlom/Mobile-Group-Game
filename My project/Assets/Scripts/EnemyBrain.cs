@@ -9,7 +9,7 @@ public class EnemyBrain : MonoBehaviour
     [Tooltip("The amount of seconds before the shock effect dissapears.")]
     [SerializeField] float unshockTime;
     [Tooltip("The amount of damage that this enemy will do to the tower.")]
-    [SerializeField] float damage;
+    public int damage;
     [Tooltip("If the enemy is on fire.")]
     [SerializeField] bool onFire = false;
     [Tooltip("Amount of coins dropped on death.")]
