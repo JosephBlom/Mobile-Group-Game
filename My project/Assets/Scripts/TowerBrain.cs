@@ -26,6 +26,7 @@ public class TowerBrain : MonoBehaviour
     public int cost;
     public List<string> possibleAbilities = new List<string>();
     public List<string> unlockedAbilities = new List<string>();
+
     private Transform target;
 
     //Skill Refrences
@@ -99,7 +100,15 @@ public class TowerBrain : MonoBehaviour
             applyBuffs(bullet);
             bullet.GetComponent<Rigidbody2D>().velocity = shootDirection * bulletSpeed;
             bullet.transform.right = shootDirection;
-            Destroy(bullet, 2);
+            if (unlockedAbilities.Contains("HomingBullets"))
+            {
+                bullet.GetComponent<BulletManager>().target = target;
+                bullet.GetComponent<BulletManager>().homing = true;
+            }
+            else
+            {
+                Destroy(bullet, 2);
+            }
         }
         yield return new WaitForSeconds(fireTime/ (1+attackSpeed));
         StartCoroutine(Shoot());
