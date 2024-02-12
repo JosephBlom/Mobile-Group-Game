@@ -549,9 +549,33 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2314191662422621434, guid: 96905e285cd5a864ebbf1a9c910a2ecb, type: 3}
+      propertyPath: m_fontSize
+      value: 54.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314191662422621434, guid: 96905e285cd5a864ebbf1a9c910a2ecb, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593396857055507026, guid: 96905e285cd5a864ebbf1a9c910a2ecb, type: 3}
+      propertyPath: m_fontSize
+      value: 43.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4593396857055507026, guid: 96905e285cd5a864ebbf1a9c910a2ecb, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6535860221951338001, guid: 96905e285cd5a864ebbf1a9c910a2ecb, type: 3}
       propertyPath: m_Name
       value: UpgradeMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7338358239375559621, guid: 96905e285cd5a864ebbf1a9c910a2ecb, type: 3}
+      propertyPath: m_fontSize
+      value: 55.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7338358239375559621, guid: 96905e285cd5a864ebbf1a9c910a2ecb, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7428853530769808062, guid: 96905e285cd5a864ebbf1a9c910a2ecb, type: 3}
       propertyPath: m_AnchorMax.y
