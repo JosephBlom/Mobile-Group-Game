@@ -246,7 +246,7 @@ MonoBehaviour:
   baseDamage: 9
   damageMult: 0
   damageLvl: 0
-  cost: 500
+  cost: 450
   possibleAbilities:
   - Piercing
   - Shock
