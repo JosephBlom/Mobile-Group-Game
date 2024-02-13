@@ -59,6 +59,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameField: {fileID: 0}
   passwordField: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 3521599428077495277, guid: 28a042cf4b041564e90a51ce7237687b, type: 3}
   username: 
   password: 

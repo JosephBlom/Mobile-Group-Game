@@ -20,6 +20,9 @@ public class LoginManager : MonoBehaviour
             username = usernameField.text;
             password = passwordField.text;
 
+            FindObjectOfType<Player>().unlockedWorlds.Add("Mercury");
+            FindObjectOfType<Player>().unlockedLevels.Add("Mercury 1");
+
             string path = Application.persistentDataPath + "/" + username + ".game";
             if (File.Exists(path))
             {
@@ -29,8 +32,6 @@ public class LoginManager : MonoBehaviour
             {
                 SaveSystem.CreateAccount(player, username, password);
                 FindObjectOfType<Animator>().SetBool("IsOpen", true);
-                FindObjectOfType<Player>().unlockedWorlds[0] = "Mercury";
-                FindObjectOfType<Player>().unlockedLevels[0] = "Mercury 1";
             }
         }
         else

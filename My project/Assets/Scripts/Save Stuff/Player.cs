@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public string[] unlockedWorlds;
-    public string[] unlockedLevels;
-    public string[] unlockedTowers;
+    public List<string> unlockedWorlds;
+    public List<string> unlockedLevels;
+    public List<string> unlockedTowers;
     public string password;
     public string username;
 }
