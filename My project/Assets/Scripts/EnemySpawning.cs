@@ -30,10 +30,9 @@ public class EnemySpawning : MonoBehaviour
 
     void FixedUpdate()
     {
-        if((currWave > waveAmount))
+        if(currWave > waveAmount)
         {
             SceneManager.LoadScene("LevelSelect");
-            //Add go to next level code here.
         }
         else
         {
