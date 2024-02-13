@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -23,11 +24,10 @@ public class ButtonManager : MonoBehaviour
         {
             if (!player.unlockedWorlds.Contains(btnList[i].name))
             {
+                sceneButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = player.unlockedWorlds[0];
                 sceneButtons[i].interactable = false;
             }
         }
-
-
     }
 
 

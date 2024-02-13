@@ -26,7 +26,5 @@ public class ButtonMenuManager : MonoBehaviour
                 sceneButtons[i].interactable = false;
             }
         }
-
-
     }
 }
