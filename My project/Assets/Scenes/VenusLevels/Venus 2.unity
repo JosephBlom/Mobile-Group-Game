@@ -8254,6 +8254,22 @@ PrefabInstance:
       propertyPath: waveAmount
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
+      propertyPath: enemySpawns.Array.data[0].x
+      value: 15.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
+      propertyPath: enemySpawns.Array.data[0].y
+      value: 10.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
+      propertyPath: enemySpawns.Array.data[1].x
+      value: -8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
+      propertyPath: enemySpawns.Array.data[1].y
+      value: -7.38
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
