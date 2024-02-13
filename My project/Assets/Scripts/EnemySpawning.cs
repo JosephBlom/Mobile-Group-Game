@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EnemySpawning : MonoBehaviour
 {
-    [SerializeField] int waveAmount;
+    [SerializeField] int waveAmount = 1;
 
     public List<Vector3> enemySpawns = new List<Vector3>();
     public List<Enemy> enemies = new List<Enemy>();
