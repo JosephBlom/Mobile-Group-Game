@@ -404,8 +404,8 @@ GameObject:
   - component: {fileID: 384202341}
   - component: {fileID: 384202340}
   m_Layer: 5
-  m_Name: Venus Button
-  m_TagString: Untagged
+  m_Name: Venus
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,8 +537,8 @@ GameObject:
   - component: {fileID: 439773621}
   - component: {fileID: 439773620}
   m_Layer: 5
-  m_Name: Mercury Button
-  m_TagString: Untagged
+  m_Name: Mercury
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1174,8 +1174,8 @@ GameObject:
   - component: {fileID: 656931378}
   - component: {fileID: 656931377}
   m_Layer: 5
-  m_Name: Earth Button
-  m_TagString: Untagged
+  m_Name: 'Earth '
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1441,8 +1441,8 @@ GameObject:
   - component: {fileID: 759908286}
   - component: {fileID: 759908285}
   m_Layer: 5
-  m_Name: Uranus Button
-  m_TagString: Untagged
+  m_Name: Uranus
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1574,8 +1574,8 @@ GameObject:
   - component: {fileID: 776251351}
   - component: {fileID: 776251350}
   m_Layer: 5
-  m_Name: 'Jupiter Button '
-  m_TagString: Untagged
+  m_Name: Jupiter
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1793,6 +1793,7 @@ Transform:
   m_Children:
   - {fileID: 1418504464}
   - {fileID: 1434802886}
+  - {fileID: 2076164543}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1260246637
@@ -2428,8 +2429,8 @@ GameObject:
   - component: {fileID: 1604024107}
   - component: {fileID: 1604024106}
   m_Layer: 5
-  m_Name: Mars Button
-  m_TagString: Untagged
+  m_Name: Mars
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2561,8 +2562,8 @@ GameObject:
   - component: {fileID: 2072580782}
   - component: {fileID: 2072580781}
   m_Layer: 5
-  m_Name: Saturn Button
-  m_TagString: Untagged
+  m_Name: Saturn
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2694,8 +2695,8 @@ GameObject:
   - component: {fileID: 2075159556}
   - component: {fileID: 2075159555}
   m_Layer: 5
-  m_Name: Neptune Button
-  m_TagString: Untagged
+  m_Name: Neptune
+  m_TagString: btn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2814,6 +2815,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2075159553}
   m_CullTransparentMesh: 1
+--- !u!1 &2076164542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2076164543}
+  - component: {fileID: 2076164544}
+  m_Layer: 0
+  m_Name: ButtonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2076164543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076164542}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1004738829}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2076164544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076164542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a49431b1ff67e5469e9d75364f12f5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
