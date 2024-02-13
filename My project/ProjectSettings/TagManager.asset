@@ -18,6 +18,7 @@ TagManager:
   - Bullet
   - CanPlace
   - Tower
+  - btn
   layers:
   - Default
   - TransparentFX
