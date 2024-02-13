@@ -24381,62 +24381,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6265545010899958673, guid: d59cea2baa45f2e408470ecb9ea8be4d, type: 3}
   m_PrefabInstance: {fileID: 1950294266}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1962706016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1962706018}
-  - component: {fileID: 1962706017}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1962706017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962706016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f546541e5b56ee418612745c7085d6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waveAmount: 0
-  enemySpawns:
-  - {x: 17.19, y: 12.72, z: 0}
-  - {x: 17.34, y: -8.4, z: 0}
-  enemies:
-  - enemyPrefab: {fileID: 6080822682556119129, guid: 9fe51299f5ca97c48b17f2e5cc98a5c7, type: 3}
-    cost: 1
-  currWave: 1
-  waveValue: 1
-  enemiesToSpawn: []
-  aliveEnemies: []
-  waveDuration: 20
---- !u!4 &1962706018
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962706016}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2823128, y: -2.6237862, z: -0.0039140363}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1976293237 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6265545010899958673, guid: d59cea2baa45f2e408470ecb9ea8be4d, type: 3}
@@ -26333,7 +26277,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 1962706018}
   - {fileID: 1800782086}
   - {fileID: 1209896732}
   - {fileID: 440143099}
