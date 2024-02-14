@@ -4405,13 +4405,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: End
       objectReference: {fileID: 0}
+    - target: {fileID: 6726287160766647166, guid: c6f6f5d5370abd844a2edcc6e8841b10, type: 3}
+      propertyPath: m_Color.b
+      value: 0.09411766
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726287160766647166, guid: c6f6f5d5370abd844a2edcc6e8841b10, type: 3}
+      propertyPath: m_Color.g
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726287160766647166, guid: c6f6f5d5370abd844a2edcc6e8841b10, type: 3}
+      propertyPath: m_Color.r
+      value: 0.70980394
+      objectReference: {fileID: 0}
     - target: {fileID: 9220269673792581864, guid: c6f6f5d5370abd844a2edcc6e8841b10, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.69
+      value: -2.64
       objectReference: {fileID: 0}
     - target: {fileID: 9220269673792581864, guid: c6f6f5d5370abd844a2edcc6e8841b10, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.39
+      value: -9.42
       objectReference: {fileID: 0}
     - target: {fileID: 9220269673792581864, guid: c6f6f5d5370abd844a2edcc6e8841b10, type: 3}
       propertyPath: m_LocalPosition.z
