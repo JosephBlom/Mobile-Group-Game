@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3209718827423834801}
   - component: {fileID: -3715318129953675394}
   m_Layer: 6
-  m_Name: BigEnemy 1
+  m_Name: PurpleEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 1514054757, guid: 4a0aea3259f0b2941bbd3301aa741ef7, type: 3}
+  m_Sprite: {fileID: 2062064852, guid: 13d575b6583c7b747aa331cb6a906cbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -231,7 +231,7 @@ Animator:
   m_GameObject: {fileID: 6080822682556119129}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bdeaccc8cdbf33a499dde3593aaf21e9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9b4fde718171ff74090b8517fed694dc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
