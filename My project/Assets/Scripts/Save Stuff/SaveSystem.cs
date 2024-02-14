@@ -23,8 +23,6 @@ public static class SaveSystem
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(player);
-        data.password = password;
-        data.username = username;
 
         formatter.Serialize(stream, data);
         stream.Close();

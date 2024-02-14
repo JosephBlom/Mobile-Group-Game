@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class SaveManager : MonoBehaviour
 {
     [SerializeField] Player player;
@@ -32,6 +32,9 @@ public class SaveManager : MonoBehaviour
         player.unlockedTowers = data.unlockedTowers;
         player.password = data.password;
         player.username = data.username;
+
+        GameObject saveIndicator = GameObject.Find("saveIndicator");
+        saveIndicator.GetComponent<Image>().color = Color.green;
 
     }
 }
