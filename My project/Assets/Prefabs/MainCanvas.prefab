@@ -122,9 +122,11 @@ MonoBehaviour:
   basicTower: {fileID: 2641732077224007064, guid: dd16fd60718b44941aea563a961b0313, type: 3}
   longRangeTower: {fileID: 2630037270358343058, guid: d91c78fa07204cb49b45b4e067805242, type: 3}
   heavyTower: {fileID: 7777048579094749495, guid: 555d115de86c82c448c22dbc65dbeba1, type: 3}
+  rapidTower: {fileID: 0}
   basicTowerObject: {fileID: 8868888333281388338, guid: e5973b602c3e8834bbbe8c2a97b834fb, type: 3}
   longRangeTowerObject: {fileID: 5247561949199171639, guid: ae2844f35c3e27b4885214690429fefa, type: 3}
   heavyTowerObject: {fileID: 2371871300248335992, guid: 3fdef5dbfed2a3a499afec572d49609a, type: 3}
+  rapidTowerObject: {fileID: 1950912081846255884, guid: 61be721e6b2f9494995134d700806ac0, type: 3}
 --- !u!1001 &867948969254235013
 PrefabInstance:
   m_ObjectHideFlags: 0

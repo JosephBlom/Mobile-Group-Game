@@ -110,7 +110,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  moveSpeed: 3
+  moveSpeed: 2
   nextPosition: 0
   startPosition: 0
   shocked: 0
