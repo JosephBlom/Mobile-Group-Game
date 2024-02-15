@@ -8471,7 +8471,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
       propertyPath: waveAmount
-      value: 10
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
+      propertyPath: waveDuration
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
       propertyPath: enemies.Array.size
@@ -22821,7 +22825,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
