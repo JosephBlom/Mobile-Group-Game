@@ -7566,6 +7566,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d59cea2baa45f2e408470ecb9ea8be4d, type: 3}
+--- !u!114 &763266199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -8535868741661211042, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+  m_PrefabInstance: {fileID: 1368179757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9874491ad31bda74fa2ecbc8556bd9d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &766546428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14560,6 +14571,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 427301320084264205, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 427301320084264205, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 427301320084264205, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 763266199}
+    - target: {fileID: 427301320084264205, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 427301320084264205, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyRapidTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 427301320084264205, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MenuManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 427301320084264205, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1175508427161798112, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -14755,6 +14794,14 @@ PrefabInstance:
     - target: {fileID: 9041678898495464329, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127221391358640529, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 763266199}
+    - target: {fileID: 9127221391358640529, guid: 7808a2d573d4680419f03c57001bc106, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyLongRangeTower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

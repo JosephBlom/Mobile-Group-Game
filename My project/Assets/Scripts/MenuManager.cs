@@ -17,12 +17,16 @@ public class MenuManager : MonoBehaviour
     [SerializeField] GameObject longRangeTower;
     [Tooltip("This Should Be the Canvas Object For The Tower Not The Actualy Tower.")]
     [SerializeField] GameObject heavyTower;
+    [Tooltip("This Should Be the Canvas Object For The Tower Not The Actualy Tower.")]
+    [SerializeField] GameObject rapidTower;
     [Tooltip("This Should Be the Actual Object For The Tower Not The Actualy Tower.")]
     [SerializeField] GameObject basicTowerObject;
     [Tooltip("This Should Be the Actual Object For The Tower Not The Actualy Tower.")]
     [SerializeField] GameObject longRangeTowerObject;
     [Tooltip("This Should Be the Actual Object For The Tower Not The Actualy Tower.")]
     [SerializeField] GameObject heavyTowerObject;
+    [Tooltip("This Should Be the Actual Object For The Tower Not The Actualy Tower.")]
+    [SerializeField] GameObject rapidTowerObject;
 
     Coins playerBank;
 
@@ -86,6 +90,19 @@ public class MenuManager : MonoBehaviour
             GameObject ship = Instantiate(heavyTower, new Vector3(0, 0, 0), Quaternion.identity);
             ship.transform.SetParent(mainCanvas.transform, false);
             playerBank.subtractCoins(heavyTowerObject.GetComponent<TowerBrain>().cost);
+        }
+        else
+        {
+            Debug.Log("This Tower is Too Expensive!");
+        }
+    }
+    public void BuyRapidTower()
+    {
+        if (playerBank.coinTotal >= rapidTowerObject.GetComponent<TowerBrain>().cost)
+        {
+            GameObject ship = Instantiate(rapidTower, new Vector3(0, 0, 0), Quaternion.identity);
+            ship.transform.SetParent(mainCanvas.transform, false);
+            playerBank.subtractCoins(rapidTowerObject.GetComponent<TowerBrain>().cost);
         }
         else
         {

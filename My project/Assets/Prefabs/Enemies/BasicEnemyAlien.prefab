@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 5347469898489815380}
   - component: {fileID: -4602938422564393814}
   - component: {fileID: -5481144985501328833}
-  - component: {fileID: 3209718827423834801}
   - component: {fileID: -3715318129953675394}
+  - component: {fileID: 2571002243949078159}
   m_Layer: 6
-  m_Name: BigEnemy
+  m_Name: BasicEnemyAlien
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 1514054757, guid: 4a0aea3259f0b2941bbd3301aa741ef7, type: 3}
+  m_Sprite: {fileID: -1207906606, guid: 3a52a6c4766aaca4a916c1e10a91236b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  moveSpeed: 3
+  moveSpeed: 4
   nextPosition: 0
   startPosition: 0
   shocked: 0
@@ -126,11 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d7ef0309e064047b581f9fbacd528e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 15
-  unshockTime: 3
-  damage: 15
+  health: 10
+  unshockTime: 1
+  damage: 6
   onFire: 0
-  coins: 80
+  coins: 50
 --- !u!50 &-5481144985501328833
 Rigidbody2D:
   serializedVersion: 4
@@ -158,7 +158,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &3209718827423834801
+--- !u!95 &-3715318129953675394
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6080822682556119129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 196f37c102b872f4997ea09998d6b1eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!60 &2571002243949078159
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,43 +223,25 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.1875, y: -0.21875}
-      - {x: 0.28125, y: -0.0625}
-      - {x: 0.265625, y: 0.109375}
-      - {x: 0.1875, y: 0.375}
-      - {x: 0.078125, y: 0.453125}
-      - {x: -0.0625, y: 0.453125}
-      - {x: -0.1875, y: 0.359375}
-      - {x: -0.34375, y: 0.40625}
-      - {x: -0.421875, y: 0.375}
-      - {x: -0.46875, y: 0.078125}
-      - {x: -0.46875, y: -0.234375}
-      - {x: -0.421875, y: -0.359375}
-      - {x: -0.34375, y: -0.4375}
-      - {x: -0.15625, y: -0.453125}
-      - {x: 0.140625, y: -0.453125}
-      - {x: 0.40625, y: -0.359375}
-      - {x: 0.40625, y: -0.234375}
-      - {x: 0.390625, y: -0.1875}
+    - - {x: 0.296875, y: 0.0625}
+      - {x: 0.34375, y: 0.203125}
+      - {x: 0.34375, y: 0.28125}
+      - {x: 0.296875, y: 0.296875}
+      - {x: 0.09375, y: 0.390625}
+      - {x: -0.0625, y: 0.390625}
+      - {x: -0.234375, y: 0.34375}
+      - {x: -0.296875, y: 0.34375}
+      - {x: -0.40625, y: 0.1875}
+      - {x: -0.390625, y: 0.125}
+      - {x: -0.40625, y: 0.078125}
+      - {x: -0.40625, y: -0.234375}
+      - {x: -0.390625, y: -0.28125}
+      - {x: -0.234375, y: -0.34375}
+      - {x: -0.125, y: -0.28125}
+      - {x: 0, y: -0.390625}
+      - {x: 0.125, y: -0.390625}
+      - {x: 0.3125, y: -0.3125}
+      - {x: 0.34375, y: -0.25}
+      - {x: 0.34375, y: -0.203125}
+      - {x: 0.296875, y: -0.1875}
   m_UseDelaunayMesh: 0
---- !u!95 &-3715318129953675394
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6080822682556119129}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bdeaccc8cdbf33a499dde3593aaf21e9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
