@@ -6788,7 +6788,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
       propertyPath: waveAmount
-      value: 15
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
+      propertyPath: waveDuration
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
       propertyPath: enemies.Array.size
