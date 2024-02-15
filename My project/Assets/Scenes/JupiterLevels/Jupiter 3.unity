@@ -10642,7 +10642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
       propertyPath: enemySpawns.Array.data[1].y
-      value: -6.79
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 7975812309731955163, guid: 712954b60fb93594fa4b7d319ce28618, type: 3}
       propertyPath: enemySpawns.Array.data[2].x
