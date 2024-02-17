@@ -34,6 +34,14 @@ public class EnemyBrain : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("End"))
+        {
+            enemySpawning.aliveEnemies.RemoveAt(0);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))

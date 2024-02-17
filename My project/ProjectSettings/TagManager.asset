@@ -19,6 +19,7 @@ TagManager:
   - CanPlace
   - Tower
   - btn
+  - End
   layers:
   - Default
   - TransparentFX
