@@ -168,8 +168,8 @@ MonoBehaviour:
   fireTime: 5
   attackSpeed: 0
   attackSpeedLvl: 0
-  bulletSpeed: 4
-  baseDamage: 15
+  bulletSpeed: 5
+  baseDamage: 10
   damageMult: 0
   damageLvl: 0
   cost: 700

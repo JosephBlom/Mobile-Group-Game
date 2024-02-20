@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  unshockTime: 1
+  unshockTime: 3
   damage: 6
   onFire: 0
   coins: 50

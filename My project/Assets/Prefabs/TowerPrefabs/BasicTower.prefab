@@ -195,7 +195,7 @@ MonoBehaviour:
   attackSpeed: 0
   attackSpeedLvl: 0
   bulletSpeed: 10
-  baseDamage: 3
+  baseDamage: 2
   damageMult: 0
   damageLvl: 0
   cost: 300
