@@ -110,7 +110,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  moveSpeed: 8
+  moveSpeed: 6
   nextPosition: 0
   startPosition: 0
   shocked: 0
@@ -126,9 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d7ef0309e064047b581f9fbacd528e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 2
   unshockTime: 1
-  damage: 10
+  damage: 7
   onFire: 0
   coins: 40
 --- !u!50 &-5481144985501328833
