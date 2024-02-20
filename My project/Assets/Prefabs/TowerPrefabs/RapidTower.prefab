@@ -162,8 +162,8 @@ MonoBehaviour:
   rotateSpeed: 550
   bulletPrefab: {fileID: 6992161731503384514, guid: 29e09343d99aa9041933f2381b8ce002, type: 3}
   shootSpot: {fileID: 2059447233682358965}
-  fireTime: 0.35
-  attackSpeed: 1
+  fireTime: 0.45
+  attackSpeed: 0.5
   attackSpeedLvl: 0
   bulletSpeed: 10
   baseDamage: 0.5
