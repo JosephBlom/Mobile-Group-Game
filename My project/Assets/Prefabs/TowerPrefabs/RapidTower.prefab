@@ -162,17 +162,17 @@ MonoBehaviour:
   rotateSpeed: 550
   bulletPrefab: {fileID: 6992161731503384514, guid: 29e09343d99aa9041933f2381b8ce002, type: 3}
   shootSpot: {fileID: 2059447233682358965}
-  fireTime: 0.25
+  fireTime: 0.35
   attackSpeed: 1
   attackSpeedLvl: 0
   bulletSpeed: 10
-  baseDamage: 1.5
+  baseDamage: 0.5
   damageMult: 0
   damageLvl: 0
   cost: 1000
   possibleAbilities:
   - Shock
-  - Piercing
+  - HomingBullets
   unlockedAbilities: []
 --- !u!1 &2059447233682358965
 GameObject:
@@ -235,7 +235,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
