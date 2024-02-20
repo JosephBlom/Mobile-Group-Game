@@ -19,8 +19,11 @@ public class EnemyPathing : MonoBehaviour
     string[] pathNames = { "Path1", "Path2", "Path3", "Path4", "Path5" };
     GameObject pathPoints;
 
+    float defaultMoveSpeed;
+
     private void Start()
     {
+        defaultMoveSpeed = moveSpeed;
         nextPosition = 1;
         pathPoints = GameObject.FindGameObjectWithTag(pathNames[startPosition]);
         travelPoints = pathPoints.GetComponentsInChildren<Transform>();
@@ -61,6 +64,6 @@ public class EnemyPathing : MonoBehaviour
     public IEnumerator resetSpeed(float unshockTime)
     {
         yield return new WaitForSeconds(unshockTime);
-        moveSpeed *= 2;
+        moveSpeed = defaultMoveSpeed;
     }
 }

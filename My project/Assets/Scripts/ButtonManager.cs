@@ -9,7 +9,6 @@ public class ButtonManager : MonoBehaviour
     public Player player;
     public List<Button> sceneButtons;
 
-    [SerializeField] TextMeshProUGUI testerText;
     string test;
 
     private void Start()
@@ -38,7 +37,6 @@ public class ButtonManager : MonoBehaviour
         {
             test += player.unlockedWorlds[i] + ", ";
         }
-        testerText.text = test;
     }
 
 

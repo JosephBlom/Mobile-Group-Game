@@ -14,9 +14,13 @@ public class ButtonMenuManager : MonoBehaviour
 
         //Get all the buttons.
         GameObject[] btnList = GameObject.FindGameObjectsWithTag("btn");
-        for (int i = 0; i < btnList.Length; i++)
+        for(int i = 0; i < btnList.Length; i++)
         {
             sceneButtons.Add(btnList[i].GetComponent<Button>());
+        }
+        if (player.unlockedLevels.Count == 0)
+        {
+            player.unlockedLevels.Add("Mercury 1");
         }
 
         for (int i = 0; i < sceneButtons.Count; i++)

@@ -77,6 +77,7 @@ public class InputHandler : MonoBehaviour
             nextAbility = getNextAbility(towerBrain);
             towerBrain.unlockedAbilities.Add(nextAbility);
             nextAbility = getNextAbility(towerBrain);
+            playerBank.coinTotal -= towerBrain.unlockedAbilities.Count * 200;
             OpenMenu();
         }
         else
@@ -91,6 +92,7 @@ public class InputHandler : MonoBehaviour
         {
             towerBrain.damageMult += 0.3f;
             towerBrain.damageLvl++;
+            playerBank.coinTotal -= towerBrain.damageLvl * 100;
             OpenMenu();
         }
         else
@@ -106,6 +108,7 @@ public class InputHandler : MonoBehaviour
         {
             towerBrain.attackSpeed += 0.3f;
             towerBrain.attackSpeedLvl++;
+            playerBank.coinTotal -= towerBrain.attackSpeedLvl * 100;
             OpenMenu();
         }
         else
