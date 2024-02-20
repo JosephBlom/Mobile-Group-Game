@@ -33,8 +33,5 @@ public class SaveManager : MonoBehaviour
         player.password = data.password;
         player.username = data.username;
 
-        GameObject saveIndicator = GameObject.Find("saveIndicator");
-        saveIndicator.GetComponent<Image>().color = Color.green;
-
     }
 }

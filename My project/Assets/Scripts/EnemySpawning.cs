@@ -22,8 +22,11 @@ public class EnemySpawning : MonoBehaviour
     int coinsPerWave = 200;
     Coins coin;
 
+    Player player;
+
     void Start()
     {
+        player = FindObjectOfType<Player>();
         coin = FindObjectOfType<Coins>();
         GenerateWave();
     }
@@ -32,6 +35,19 @@ public class EnemySpawning : MonoBehaviour
     {
         if(currWave > waveAmount)
         {
+            int currentCount = SceneManager.sceneCount;
+            if (currentCount > 3)
+            {
+                currentCount = 3;
+            }
+            currentCount++;
+            int nextIndex = SceneManager.GetActiveScene().buildIndex;
+            nextIndex++;
+            string indexPath = SceneUtility.GetScenePathByBuildIndex(nextIndex);
+            string[] indexList = indexPath.Split('/');
+            string[] finalList = indexList[3].Split('.');
+            player.unlockedLevels.Add(finalList[0]);
+            SaveSystem.SavePlayer(player, player.username);
             SceneManager.LoadScene("LevelSelect");
         }
         else

@@ -43,7 +43,6 @@ public class LoginManager : MonoBehaviour
                 SaveSystem.SavePlayer(player, username);
                 FindObjectOfType<Animator>().SetBool("IsOpen", true);
                 GameObject saveIndicator = GameObject.Find("saveIndicator");
-                saveIndicator.GetComponent<Image>().color = Color.blue;
             }
         }
         else
