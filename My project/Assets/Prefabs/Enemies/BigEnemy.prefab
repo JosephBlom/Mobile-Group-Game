@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93d7ef0309e064047b581f9fbacd528e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 15
-  unshockTime: 3
+  health: 17
+  unshockTime: 2
   damage: 15
   onFire: 0
   coins: 80
