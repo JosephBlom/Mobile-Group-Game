@@ -15,20 +15,20 @@ EditorBuildSettings:
     path: Assets/Scenes/JosephScene.unity
     guid: cc0ff7e4f5be2db429b58a9dbdda922d
   - enabled: 1
+    path: Assets/Scenes/WorldMenus/MercuryMenu.unity
+    guid: d0dd31dfbb1fe814b9c842ec966e9a74
+  - enabled: 1
+    path: Assets/Scenes/WorldMenus/VenusMenu.unity
+    guid: abb9a57a92800c247a5f0a566cefc8f8
+  - enabled: 1
     path: Assets/Scenes/WorldMenus/EarthMenu.unity
     guid: 14ed6f7657ea5eb448be17944e770bf5
-  - enabled: 1
-    path: Assets/Scenes/WorldMenus/JupiterMenu.unity
-    guid: acf3728479f7b34419e7ee27ce39eb7c
   - enabled: 1
     path: Assets/Scenes/WorldMenus/MarsMenu.unity
     guid: dcf7381a7b9d7244aabe832dbcf5d550
   - enabled: 1
-    path: Assets/Scenes/WorldMenus/MercuryMenu.unity
-    guid: d0dd31dfbb1fe814b9c842ec966e9a74
-  - enabled: 1
-    path: Assets/Scenes/WorldMenus/NeptuneMenu.unity
-    guid: a8fb2c2fab7694342bce23bbf844f093
+    path: Assets/Scenes/WorldMenus/JupiterMenu.unity
+    guid: acf3728479f7b34419e7ee27ce39eb7c
   - enabled: 1
     path: Assets/Scenes/WorldMenus/SaturnMenu.unity
     guid: 5742105ad121b66478f8a8d5f36f3406
@@ -36,11 +36,11 @@ EditorBuildSettings:
     path: Assets/Scenes/WorldMenus/UranusMenu.unity
     guid: c06d2f19647ea9545ac4f9fc9cf3f627
   - enabled: 1
-    path: Assets/Scenes/WorldMenus/VenusMenu.unity
-    guid: abb9a57a92800c247a5f0a566cefc8f8
+    path: Assets/Scenes/WorldMenus/NeptuneMenu.unity
+    guid: a8fb2c2fab7694342bce23bbf844f093
   - enabled: 1
     path: Assets/Scenes/EarthLevels/Earth 1.unity
-    guid: c874b56cb70d1734c9028cbb4894b478
+    guid: e89a541926c1e32479027fa5693e4d34
   - enabled: 1
     path: Assets/Scenes/EarthLevels/Earth 2.unity
     guid: 67904f24d7ec48f42bfa2b27aca350a5

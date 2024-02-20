@@ -24,6 +24,11 @@ public class EnemySpawning : MonoBehaviour
 
     Player player;
 
+    int nextIndex;
+    string indexPath;
+    string[] indexList;
+    string[] finalList;
+
     void Start()
     {
         player = FindObjectOfType<Player>();
@@ -35,17 +40,50 @@ public class EnemySpawning : MonoBehaviour
     {
         if(currWave > waveAmount)
         {
-            int currentCount = SceneManager.sceneCount;
-            if (currentCount > 3)
+            string[] splitName = SceneManager.GetActiveScene().name.Split(' ');
+            if (splitName[1].Equals("3"))
             {
-                currentCount = 3;
+                if (player.unlockedWorlds.Contains("Uranus"))
+                {
+                    player.unlockedWorlds.Add("Neptune");
+                    player.unlockedLevels.Add("Neptune 1");
+                }
+                else if (player.unlockedWorlds.Contains("Saturn"))
+                {
+                    player.unlockedWorlds.Add("Uranus");
+                    player.unlockedLevels.Add("Uranus 1");
+                }
+                else if (player.unlockedWorlds.Contains("Jupiter"))
+                {
+                    player.unlockedWorlds.Add("Saturn");
+                    player.unlockedLevels.Add("Saturn 1");
+                }
+                else if (player.unlockedWorlds.Contains("Mars"))
+                {
+                    player.unlockedWorlds.Add("Jupiter");
+                    player.unlockedLevels.Add("Jupiter 1");
+                }
+                else if (player.unlockedWorlds.Contains("Earth"))
+                {
+                    player.unlockedWorlds.Add("Mars");
+                    player.unlockedLevels.Add("Mars 1");
+                }
+                else if (player.unlockedWorlds.Contains("Venus"))
+                {
+                    player.unlockedWorlds.Add("Earth");
+                    player.unlockedLevels.Add("Earth 1");
+                }
+                else if (player.unlockedWorlds.Contains("Mercury"))
+                {
+                    player.unlockedWorlds.Add("Venus");
+                    player.unlockedLevels.Add("Venus 1");
+                }
             }
-            currentCount++;
-            int nextIndex = SceneManager.GetActiveScene().buildIndex;
+            nextIndex = SceneManager.GetActiveScene().buildIndex;
             nextIndex++;
-            string indexPath = SceneUtility.GetScenePathByBuildIndex(nextIndex);
-            string[] indexList = indexPath.Split('/');
-            string[] finalList = indexList[3].Split('.');
+            indexPath = SceneUtility.GetScenePathByBuildIndex(nextIndex);
+            indexList = indexPath.Split('/');
+            finalList = indexList[3].Split('.');
             player.unlockedLevels.Add(finalList[0]);
             SaveSystem.SavePlayer(player, player.username);
             SceneManager.LoadScene("LevelSelect");
